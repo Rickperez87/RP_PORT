@@ -1,40 +1,50 @@
-const element = document.querySelector(".txt-type");
-// const words = element.dataset.split(",");
-const words = element.dataset.words.split(",");
-console.log(words);
-const { wait } = element.dataset;
+class TypeWriter {
+  constructor(htmlElement, words, wait) {
+    this.htmlElement = htmlElement;
+    this.words = words;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.text = "";
+    this.isReverse = false;
+    this.wordIdx = 0;
+  }
+  type() {
+    let fulltxt = this.words[this.wordIdx];
 
-//function takes a word.
-//adds letter one by one and removes letter one by one according to wait time.
+    if (this.isReverse) {
+      //remove typing
+      this.text = fulltxt.subString(0, this.text.length - 1);
+    } else {
+      this.text = fulltxt.subString(0, this.text.length + 1);
+    }
 
-function typeWord(word) {
-  let typedWord = [];
-  let wordArray = word.trim().split("");
-  let count = 0;
-  let reverse = false;
-  intervalId = setInterval(() => {
-    if (count === [word.length]) {
-      reverse = true;
+    this.htmlElement.innerHTML = `${this.text}`;
+    //initial type speed
+    let typeSpeed = 150;
+
+    if (this.isReverse) {
+      typeSpeed /= 2;
     }
-    while (!reverse) {
-      typedWord = typedWord.concat(wordArray[count]);
-      element.innerHTML = typedWord.join("");
-      count++;
+
+    if (!this.isReverse && this.text.length === fulltxt.length) {
+      typeSpeed = this.wait;
+      this.isReverse = true;
+    } else if (isReverse && this.text === "") {
+      this.isReverse = false;
+      this.wordIdx++;
+      typeSpeed = 500;
     }
-    while (reverse) {
-      count--;
-      typedWord.slice(0, count);
-      element.innerHTML = typedWord.join("");
-      if (count <= 0) {
-        clearInterval(intervalId);
-      }
-    }
-    console.log(reverse, count);
-  }, wait / word.length);
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
 }
 
-//function takes array and for each word function call to type out word
+document.addEventListener("DOMContentLoaded", init);
 
-//append type to span
+function init() {
+  const element = document.querySelector(".txt-type");
+  const words = JSON.parse(element.getAttribute("data-words"));
+  const wait = element.getAttribute("data-wait");
 
-typeWord(words[0], wait);
+  new TypeWriter(element, words, wait);
+}
