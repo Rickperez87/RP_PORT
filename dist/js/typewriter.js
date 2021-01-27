@@ -2,23 +2,24 @@ class TypeWriter {
   constructor(htmlElement, words, wait) {
     this.htmlElement = htmlElement;
     this.words = words;
+    this.text = "";
+    this.wordIdx = 0;
     this.wait = parseInt(wait, 10);
     this.type();
-    this.text = "";
     this.isReverse = false;
-    this.wordIdx = 0;
   }
   type() {
-    let fulltxt = this.words[this.wordIdx];
-
+    // Current index of word
+    const current = this.wordIdx % this.words.length;
+    const fullTxt = this.words[current];
     if (this.isReverse) {
       //remove typing
-      this.text = fulltxt.subString(0, this.text.length - 1);
+      this.text = fullTxt.substring(0, this.text.length - 1);
     } else {
-      this.text = fulltxt.subString(0, this.text.length + 1);
+      this.text = fullTxt.substring(0, this.text.length + 1);
     }
 
-    this.htmlElement.innerHTML = `${this.text}`;
+    this.htmlElement.innerHTML = `<span class="txt">${this.text}<span class="blinking-cursor">|</span></span>`;
     //initial type speed
     let typeSpeed = 150;
 
@@ -26,10 +27,10 @@ class TypeWriter {
       typeSpeed /= 2;
     }
 
-    if (!this.isReverse && this.text.length === fulltxt.length) {
+    if (!this.isReverse && this.text === fullTxt) {
       typeSpeed = this.wait;
       this.isReverse = true;
-    } else if (isReverse && this.text === "") {
+    } else if (this.isReverse && this.text === "") {
       this.isReverse = false;
       this.wordIdx++;
       typeSpeed = 500;
