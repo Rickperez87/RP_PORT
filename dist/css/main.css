@@ -50,6 +50,18 @@ input[class^="btn-"]:hover {
   50% {
     color: transparent; } }
 
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -113,3 +125,13 @@ img {
       border-color: #ccc; }
     #main-nav a.current {
       border-color: #ffbc00; }
+
+#home-a .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+
+#home-a .fas,
+#home-a .fab {
+  color: #ffbc00; }
