@@ -4,6 +4,12 @@
   margin: auto;
   overflow: hidden;
 }
+.bg {
+  &-primary {
+    background: $main-color;
+    color: $dark-color;
+  }
+}
 
 //buttons
 %btn-shared {
