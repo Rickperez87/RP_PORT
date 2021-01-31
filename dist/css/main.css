@@ -171,9 +171,6 @@ img {
       cursor: pointer; }
     #home-b .items .item:hover #home-b .items .item-image {
       transform: scale(1.2); }
-    #home-b .items .item:hover #home-b .items .item-text {
-      opacity: 1;
-      transform: translateY(0); }
     #home-b .items .item-image {
       height: auto;
       display: block;
@@ -190,12 +187,16 @@ img {
       left: 0;
       bottom: 0;
       right: 0;
-      opacity: 0.2;
+      opacity: 0;
       text-align: center;
-      z-index: 1;
       color: #fff;
       transform: translateY(-20%);
       transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1); }
+    #home-b .items .item:hover #home-b .items .item-text {
+      display: block;
+      position: absolute;
+      opacity: 1;
+      transform: translateY(0); }
     #home-b .items .item-text-wrap {
       position: absolute;
       width: 100%;
