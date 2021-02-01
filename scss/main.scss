@@ -109,7 +109,20 @@ img {
     }
   }
 }
-
+//about
+.about {
+  &-content {
+    display: flex;
+  }
+  &-image {
+    width: 30%;
+    height: 350px;
+    object-fit: cover;
+  }
+  &-main-text {
+    width: 70%;
+  }
+}
 .items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

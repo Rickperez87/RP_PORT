@@ -140,6 +140,17 @@ img {
 #home-a .fab {
   color: #ffbc00; }
 
+.about-content {
+  display: flex; }
+
+.about-image {
+  width: 30%;
+  height: 350px;
+  object-fit: cover; }
+
+.about-main-text {
+  width: 70%; }
+
 .items {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
