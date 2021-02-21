@@ -180,6 +180,35 @@ img {
 .about-main-text {
   width: 70%; }
 
+.bar {
+  position: sticky;
+  height: 1.5rem;
+  background: #ddd; }
+
+.bar-dot, .bar-dot::before, .bar-dot::after {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  top: 6px;
+  border-radius: 50%;
+  position: absolute; }
+
+.bar-dot {
+  left: 10px;
+  background-color: #ff5f57; }
+
+.bar-dot::before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0; }
+
+.bar-dot::after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0; }
+
 .items {
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
@@ -215,7 +244,6 @@ img {
     height: auto;
     display: block;
     transform: translateZ(0);
-    height: 360px;
     object-fit: cover;
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1); }
   .item-image:before {
