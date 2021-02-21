@@ -39,6 +39,35 @@ input[class^="btn-"]:hover {
 .text-center {
   text-align: center; }
 
+.bar {
+  position: sticky;
+  height: 1.5rem;
+  background: #ddd; }
+
+.bar-dot, .bar-dot::before, .bar-dot::after {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  top: 6px;
+  border-radius: 50%;
+  position: absolute; }
+
+.bar-dot {
+  left: 10px;
+  background-color: #ff5f57; }
+
+.bar-dot::before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0; }
+
+.bar-dot::after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0; }
+
 .blinking-cursor {
   color: #2e3d48;
   -webkit-animation: 1s blink step-end infinite;
