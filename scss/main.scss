@@ -108,6 +108,8 @@ img {
       }
       &-main-text {
         width: 85%;
+        border-left: 3px solid $main-color;
+        margin-left: 1.5rem;
       }
     }
   }
@@ -121,8 +123,6 @@ img {
     }
   }
 }
-
-// work
 
 // bar for work cards
 .bar {
