@@ -9,6 +9,11 @@
     background: $main-color;
     color: $dark-color;
   }
+
+  &-light {
+    background: $light-color;
+    color: $dark-color;
+  }
 }
 
 //buttons
@@ -53,41 +58,6 @@ input[class^="btn-"]:hover {
   text-align: center;
 }
 
-// bar for work cards
-.bar {
-  position: sticky;
-  height: 1.5rem;
-  background: #ddd;
-}
-%bar-shared {
-  height: 12px;
-  width: 12px;
-  display: inline-block;
-  top: 6px;
-  border-radius: 50%;
-  position: absolute;
-}
-.bar {
-  &-dot {
-    @extend %bar-shared;
-    left: 10px;
-    background-color: #ff5f57;
-  }
-  &-dot::before {
-    @extend %bar-shared;
-    content: " ";
-    left: 16px;
-    background-color: #ffbd2e;
-    top: 0;
-  }
-  &-dot::after {
-    @extend %bar-shared;
-    content: " ";
-    left: 32px;
-    background-color: #28ca41;
-    top: 0;
-  }
-}
 //type writer animation
 .blinking-cursor {
   color: #2e3d48;

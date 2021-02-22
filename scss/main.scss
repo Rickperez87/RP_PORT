@@ -1,5 +1,6 @@
 @import "config";
 @import "utilities";
+@import "layout";
 
 * {
   margin: 0;
@@ -46,6 +47,7 @@ img {
 
 #header {
   &-home {
+    position: relative;
     background: $bg-image no-repeat center right/cover;
     height: 100vh;
     color: #fff;
@@ -60,22 +62,18 @@ img {
       }
     }
   }
-
-  //header inner
-  &-inner {
+  &-about,
+  &-work {
+    background: $bg-image no-repeat 20% 30% / cover;
+    color: #fff;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 #main {
   &-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding-top: 1rem;
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+
     li {
       padding: 1rem 1.5rem;
     }
@@ -95,13 +93,27 @@ img {
     }
   }
 }
-#home {
+
+//About page
+#about {
   &-a {
+    .about {
+      &-content {
+        display: flex;
+      }
+      &-image {
+        width: 15%;
+        height: auto;
+        object-fit: cover;
+      }
+      &-main-text {
+        width: 85%;
+      }
+    }
+  }
+  &-b {
     .specials {
       margin-top: 3rem;
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(4, 1fr);
     }
     .fas,
     .fab {
@@ -109,20 +121,7 @@ img {
     }
   }
 }
-//about
-.about {
-  &-content {
-    display: flex;
-  }
-  &-image {
-    width: 30%;
-    height: 350px;
-    object-fit: cover;
-  }
-  &-main-text {
-    width: 70%;
-  }
-}
+
 // work
 
 // bar for work cards
@@ -161,19 +160,18 @@ img {
   }
 }
 //work cards
-.items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+
 .item {
   position: relative;
   background: $main-color;
   overflow: hidden;
   &-image img {
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
     line-height: 0;
   }
   &::after {
@@ -197,12 +195,8 @@ img {
     transform: scale(1.2);
   }
   &-image {
-    height: auto;
-    display: block;
     transform: translateZ(0);
-    object-fit: cover;
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
-    zoom: 1;
   }
   &-image:before {
     content: "";
