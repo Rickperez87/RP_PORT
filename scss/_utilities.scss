@@ -1,6 +1,6 @@
 .container {
   max-width: $website-width;
-  padding: 0 1.5rem;
+  padding: 0 24px;
   margin: auto;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
 //buttons
 %btn-shared {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 13px 32px;
   transition: all 0.5s;
   border: none;
   cursor: pointer;
@@ -51,9 +51,9 @@ input[class^="btn-"]:hover {
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 3.2rem;
   display: block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.8rem;
   text-align: center;
   font-weight: 100;
   text-transform: uppercase;
@@ -62,14 +62,14 @@ input[class^="btn-"]:hover {
 .line {
   background: $main-color;
   display: block;
-  margin: 0 auto 1rem auto;
-  height: 2px;
-  width: 3rem;
+  margin: 0 auto 1.6rem auto;
+  height: 0.2rem;
+  width: 4.8rem;
 }
 
 .lead {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+  font-size: 2.1rem;
+  margin-bottom: 3.2rem;
 }
 
 .text-center {
@@ -98,15 +98,15 @@ input[class^="btn-"]:hover {
 
 .py {
   &-1 {
-    padding: 1rem 0;
+    padding: 1.6rem 0;
   }
   &-2 {
-    padding: 2rem 0;
+    padding: 3.2rem 0;
   }
   &-3 {
-    padding: 3rem 0;
+    padding: 4.8rem 0;
   }
   &-4 {
-    padding: 4rem 0;
+    padding: 6.4rem 0;
   }
 }

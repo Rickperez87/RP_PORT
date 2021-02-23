@@ -7,8 +7,11 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  font-size: 10px;
+}
 body {
+  font-size: 1.6rem;
   font-family: "Dosis", sans-serif;
   line-height: 1.6;
   background: #fff;
@@ -36,8 +39,8 @@ img {
 // Logo
 
 #logo {
-  width: 70px;
-  height: 70px;
+  width: 7rem;
+  height: 7rem;
   color: #fff;
   text-transform: uppercase;
 }
@@ -55,23 +58,23 @@ img {
 
     //padding to allow box shadow on header button
     .container {
-      padding-bottom: 50px;
+      padding-bottom: 5rem;
     }
     //header content
     .header-content {
       text-align: center;
       padding-top: 20%;
       h1 {
-        font-size: 4rem;
-        line-height: 1.2;
+        font-size: 6.4rem;
+        line-height: 1.6;
       }
       .btn-light:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1rm 2rem rgba(0, 0, 0, 0.3);
       }
       .btn-light:active {
         transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -79,23 +82,23 @@ img {
   &-work {
     background: $bg-image no-repeat 20% 30% / cover;
     color: #fff;
-    height: 5.5rem;
+    height: 8.8rem;
     border-bottom: 3px solid $main-color;
   }
 }
 #main {
   &-nav {
-    padding-top: 1rem;
+    padding-top: 1.6rem;
 
     li {
-      padding: 1rem 1.5rem;
+      padding: 1.6rem 2.4rem;
     }
     a {
       text-decoration: none;
       color: #ffffff;
       text-transform: uppercase;
       border-bottom: 3px transparent solid;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.8rem;
       transition: border-color 0.5s;
       &:hover {
         border-color: $medium-color;
@@ -122,13 +125,13 @@ img {
       &-main-text {
         width: 85%;
         border-left: 3px solid $main-color;
-        margin-left: 1.5rem;
+        margin-left: 2.4rem;
       }
     }
   }
   &-b {
     .specials {
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
     .fas,
     .fab {
@@ -140,34 +143,34 @@ img {
 // bar for work cards
 .bar {
   position: sticky;
-  height: 1.5rem;
+  height: 2.4rem;
   background: #ddd;
 }
 %bar-shared {
-  height: 12px;
-  width: 12px;
+  height: 1.2rem;
+  width: 1.2rem;
   display: inline-block;
-  top: 6px;
+  top: 0.6rem;
   border-radius: 50%;
   position: absolute;
 }
 .bar {
   &-dot {
     @extend %bar-shared;
-    left: 10px;
+    left: 1rem;
     background-color: #ff5f57;
   }
   &-dot::before {
     @extend %bar-shared;
     content: " ";
-    left: 16px;
+    left: 1.6rem;
     background-color: #ffbd2e;
     top: 0;
   }
   &-dot::after {
     @extend %bar-shared;
     content: " ";
-    left: 32px;
+    left: 3.2rem;
     background-color: #28ca41;
     top: 0;
   }
@@ -244,13 +247,13 @@ img {
     transform: translateY(-50%);
   }
   &-text-title {
-    font-style: 2rem;
-    padding: 0 1rem;
-    margin: 5px 0 0 0;
+    font-style: 2.4rem;
+    padding: 0 1.6rem;
+    margin: 0.5rem 0 0 0;
   }
   &-text-category {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.9rem;
     opacity: 0.7;
     margin: 0;
   }
