@@ -122,10 +122,23 @@ img {
         height: auto;
         object-fit: cover;
       }
-      &-main-text {
+      &-main-text-wrapper {
         width: 85%;
         border-left: 3px solid $main-color;
         margin-left: 2.4rem;
+        padding: 1rem;
+      }
+      &-main-text {
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+      }
+      &-title {
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      &-quote {
+        margin: 1rem 1rem;
       }
     }
   }
@@ -256,6 +269,9 @@ img {
     font-size: 1.9rem;
     opacity: 0.7;
     margin: 0;
+  }
+  &-wrapper {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 }
 

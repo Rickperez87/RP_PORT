@@ -227,10 +227,23 @@ img {
   height: auto;
   object-fit: cover; }
 
-#about-a .about-main-text {
+#about-a .about-main-text-wrapper {
   width: 85%;
   border-left: 3px solid #ffbc00;
-  margin-left: 2.4rem; }
+  margin-left: 2.4rem;
+  padding: 1rem; }
+
+#about-a .about-main-text {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left; }
+
+#about-a .about-title {
+  margin-bottom: 0.5rem;
+  text-align: center; }
+
+#about-a .about-quote {
+  margin: 1rem 1rem; }
 
 #about-b .specials {
   margin-top: 4rem; }
@@ -335,6 +348,8 @@ img {
     font-size: 1.9rem;
     opacity: 0.7;
     margin: 0; }
+  .item-wrapper {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .move-in-left {
   animation: moveInLeft 0.75s ease-out; }
