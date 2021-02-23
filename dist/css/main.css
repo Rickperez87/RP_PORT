@@ -34,7 +34,8 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: #ffbc00; }
+  background-color: #ffbc00;
+  transition: all 0.2s; }
 
 .section-title {
   font-size: 2rem;
@@ -138,12 +139,20 @@ img {
   background: url("../images/bg-img.jpg") no-repeat center right/cover;
   height: 100vh;
   color: #fff; }
+  #header-home .container {
+    padding-bottom: 50px; }
   #header-home .header-content {
     text-align: center;
     padding-top: 20%; }
     #header-home .header-content h1 {
       font-size: 4rem;
       line-height: 1.2; }
+    #header-home .header-content .btn-light:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
+    #header-home .header-content .btn-light:active {
+      transform: translateY(0);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 #header-about, #header-work {
   background: url("../images/bg-img.jpg") no-repeat 20% 30%/cover;

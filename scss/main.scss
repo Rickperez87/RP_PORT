@@ -52,6 +52,10 @@ img {
     height: 100vh;
     color: #fff;
 
+    //padding to allow box shadow on header button
+    .container {
+      padding-bottom: 50px;
+    }
     //header content
     .header-content {
       text-align: center;
@@ -59,6 +63,14 @@ img {
       h1 {
         font-size: 4rem;
         line-height: 1.2;
+      }
+      .btn-light:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+      .btn-light:active {
+        transform: translateY(0);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       }
     }
   }

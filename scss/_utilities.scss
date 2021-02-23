@@ -47,6 +47,7 @@ button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: $main-color;
+  transition: all 0.2s;
 }
 
 .section-title {
