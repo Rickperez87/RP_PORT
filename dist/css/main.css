@@ -104,6 +104,30 @@ input[class^="btn-"]:hover {
 .grid-4 {
   grid-template-columns: repeat(4, 1fr); }
 
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0; }
+  80% {
+    transform: translateX(5px); }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0; }
+  80% {
+    transform: translateX(-5px); }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -292,3 +316,18 @@ img {
     font-size: 1.2rem;
     opacity: 0.7;
     margin: 0; }
+
+.move-in-left {
+  animation: moveInLeft 0.75s ease-out; }
+
+.move-in-right {
+  animation: moveInRight 1s ease-out; }
+
+.move-in-bottom {
+  animation: moveInBottom 1s ease-out;
+  animation-delay: 3s; }
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards; }

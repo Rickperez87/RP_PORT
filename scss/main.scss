@@ -1,6 +1,7 @@
 @import "config";
 @import "utilities";
 @import "layout";
+@import "animations";
 
 * {
   margin: 0;
@@ -253,4 +254,21 @@ img {
     opacity: 0.7;
     margin: 0;
   }
+}
+
+// animation
+.move-in-left {
+  animation: moveInLeft 0.75s ease-out;
+}
+.move-in-right {
+  animation: moveInRight 1s ease-out;
+}
+.move-in-bottom {
+  animation: moveInBottom 1s ease-out;
+  animation-delay: 3s;
+}
+.fade-in {
+  animation: fadeIn 1s ease-in;
+  animation-delay: 0.3s;
+  animation-fill-mode: backwards;
 }
