@@ -40,7 +40,7 @@ class TypeWriter {
   }
 }
 
-document.addEventListener("DOMContentLoaded", setTimeout(init, 1500));
+document.addEventListener("DOMContentLoaded", setTimeout(init, 2000));
 
 function init() {
   const element = document.querySelector(".txt-type");

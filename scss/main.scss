@@ -66,11 +66,11 @@ img {
         line-height: 1.2;
       }
       .btn-light:hover {
-        transform: translateY(-1px);
+        transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       }
       .btn-light:active {
-        transform: translateY(0);
+        transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       }
     }
@@ -264,11 +264,12 @@ img {
   animation: moveInRight 1s ease-out;
 }
 .move-in-bottom {
-  animation: moveInBottom 1s ease-out;
-  animation-delay: 3s;
+  animation: moveInBottom 0.7s ease-in-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: backwards;
 }
 .fade-in {
-  animation: fadeIn 1s ease-in;
-  animation-delay: 0.3s;
+  animation: fadeIn 0.4s ease-in;
+  animation-delay: 0.5s;
   animation-fill-mode: backwards;
 }
