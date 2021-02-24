@@ -117,15 +117,6 @@ input[class^="btn-"]:hover {
   100% {
     opacity: 1; } }
 
-@keyframes moveInRight {
-  0% {
-    transform: translateX(100px);
-    opacity: 0; }
-  80% {
-    transform: translateX(-5px); }
-  100% {
-    opacity: 1; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -138,12 +129,6 @@ input[class^="btn-"]:hover {
     opacity: 0; }
   80% {
     transform: translateY(0); }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
   100% {
     opacity: 1; } }
 
@@ -183,7 +168,10 @@ img {
 
 #header-home {
   position: relative;
-  background: url("../images/bg-img.jpg") no-repeat center right/cover;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%), url("../images/bg-img.jpg");
+  background-position: center/right;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
   color: #fff; }
   #header-home .container {
@@ -202,7 +190,7 @@ img {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 #header-about, #header-work {
-  background: url("../images/bg-img.jpg") no-repeat 20% 30%/cover;
+  background: url("../images/bg-img.jpg") no-repeat 20% 8%/cover;
   color: #fff;
   height: 8.8rem;
   border-bottom: 3px solid #ffbc00; }
@@ -378,12 +366,9 @@ img {
 .move-in-left {
   animation: moveInLeft 0.75s ease-out; }
 
-.move-in-right {
-  animation: moveInRight 1s ease-out; }
-
 .move-in-bottom {
   animation: moveInBottom 0.7s ease-in-out;
-  animation-delay: 2.5s;
+  animation-delay: 2s;
   animation-fill-mode: backwards; }
 
 .fade-in {

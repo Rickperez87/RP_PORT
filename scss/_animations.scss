@@ -10,18 +10,6 @@
     opacity: 1;
   }
 }
-@keyframes moveInRight {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(-5px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -39,15 +27,6 @@
   80% {
     transform: translateY(0);
   }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
   100% {
     opacity: 1;
   }
