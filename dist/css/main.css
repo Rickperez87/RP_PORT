@@ -12,6 +12,10 @@
   background: #f4f4f4;
   color: #333; }
 
+.bg-dark {
+  background: #333;
+  color: #f4f4f4; }
+
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 13px 32px;
@@ -231,7 +235,7 @@ img {
   width: 85%;
   border-left: 3px solid #ffbc00;
   margin-left: 2.4rem;
-  padding: 1rem; }
+  padding: 1.5rem; }
 
 #about-a .about-main-text {
   width: 90%;
@@ -239,14 +243,34 @@ img {
   text-align: left; }
 
 #about-a .about-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: center; }
 
 #about-a .about-quote {
-  margin: 1rem 1rem; }
+  margin: 2.5rem 0 0 6rem; }
+
+#about-a .about-author {
+  display: block;
+  margin-right: 7rem;
+  text-align: right; }
 
 #about-b .specials {
-  margin-top: 4rem; }
+  margin-top: 2rem; }
+  #about-b .specials-logo {
+    display: inline-block;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 15rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
+  #about-b .specials-courses-list > li {
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    color: #ffbc00;
+    margin: 1rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
 
 #about-b .fas,
 #about-b .fab {
