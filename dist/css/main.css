@@ -160,93 +160,81 @@ h4 {
 img {
   width: 100%; }
 
-#logo {
-  width: 7rem;
-  height: 7rem;
-  color: #fff;
-  text-transform: uppercase; }
-
-#header-home {
-  position: relative;
-  background: url("../images/bg-img-sml-crop.jpg") no-repeat center right/cover;
-  height: 100vh;
-  color: #fff; }
-  #header-home .container {
-    padding-bottom: 5rem; }
-  #header-home .header-content {
-    text-align: center;
-    padding-top: 20%; }
-    #header-home .header-content h1 {
-      font-size: 6.4rem;
-      line-height: 1.6; }
-    #header-home .header-content .btn-light:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 1rm 2rem rgba(0, 0, 0, 0.3); }
-    #header-home .header-content .btn-light:active {
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-#header-about, #header-work {
-  background: url("../images/bg-img-sml-crop.jpg") no-repeat 20% 20%/cover;
-  color: #fff;
-  height: 8.8rem;
-  border-bottom: 3px solid #ffbc00; }
-
-#main-nav {
+.main-nav {
   padding-top: 1.6rem; }
-  #main-nav li {
+  .main-nav li {
     padding: 1.6rem 2.4rem; }
-  #main-nav a {
+  .main-nav a {
     text-decoration: none;
     color: #ffffff;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.8rem;
     transition: border-color 0.5s; }
-    #main-nav a:hover {
+    .main-nav a:hover {
       border-color: #ccc; }
-    #main-nav a.current {
+    .main-nav a.current {
       border-color: #ffbc00; }
 
-#about-a .about-content {
+.header-home {
+  position: relative;
+  background: url("../images/bg-img-sml-crop.jpg") no-repeat center right/cover;
+  height: 100vh;
+  color: #fff; }
+  .header-home .container {
+    padding-bottom: 5rem; }
+  .header-home__content {
+    text-align: center;
+    padding-top: 20%; }
+    .header-home__content h1 {
+      font-size: 6.4rem;
+      line-height: 1.6; }
+    .header-home__content .btn-light:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rm 2rem rgba(0, 0, 0, 0.3); }
+    .header-home__content .btn-light:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.header-about, .header-work {
+  background: url("../images/bg-img-sml-crop.jpg") no-repeat 20% 20%/cover;
+  color: #fff;
+  height: 8.8rem;
+  border-bottom: 3px solid #ffbc00; }
+
+.bio {
   display: flex; }
+  .bio__image {
+    width: 15%;
+    height: auto;
+    object-fit: cover; }
+  .bio__container {
+    width: 85%;
+    border-left: 3px solid #ffbc00;
+    margin-left: 2.4rem;
+    padding: 1.5rem; }
+  .bio__text-wrap {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left; }
+  .bio__title {
+    margin-bottom: 1rem;
+    text-align: center; }
+  .bio__quote {
+    margin: 2.5rem 0 0 6rem; }
+  .bio__author {
+    display: block;
+    margin-right: 7rem;
+    text-align: right; }
 
-#about-a .about-image {
-  width: 15%;
-  height: auto;
-  object-fit: cover; }
-
-#about-a .about-main-text-wrapper {
-  width: 85%;
-  border-left: 3px solid #ffbc00;
-  margin-left: 2.4rem;
-  padding: 1.5rem; }
-
-#about-a .about-main-text {
-  width: 90%;
-  margin: 0 auto;
-  text-align: left; }
-
-#about-a .about-title {
-  margin-bottom: 1rem;
-  text-align: center; }
-
-#about-a .about-quote {
-  margin: 2.5rem 0 0 6rem; }
-
-#about-a .about-author {
-  display: block;
-  margin-right: 7rem;
-  text-align: right; }
-
-#about-b .specials-logo {
+.course-list__logo {
   display: inline-block;
   padding: 2rem;
   margin-bottom: 1rem;
   border-radius: 15rem;
   box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
 
-#about-b .specials-courses-list > li {
+.course-list__items > li {
   display: inline-block;
   padding: 1rem;
   text-transform: uppercase;
@@ -256,8 +244,8 @@ img {
   margin: 1rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
 
-#about-b .fas,
-#about-b .fab {
+.course-list .fas,
+.course-list .fab {
   color: #ffbc00; }
 
 .bar {
@@ -265,7 +253,7 @@ img {
   height: 2.4rem;
   background: #ddd; }
 
-.bar-dot, .bar-dot::before, .bar-dot::after {
+.bar__dot, .bar__dot::before, .bar__dot::after {
   height: 1.2rem;
   width: 1.2rem;
   display: inline-block;
@@ -273,17 +261,17 @@ img {
   border-radius: 50%;
   position: absolute; }
 
-.bar-dot {
+.bar__dot {
   left: 1rem;
   background-color: #ff5f57; }
 
-.bar-dot::before {
+.bar__dot::before {
   content: " ";
   left: 1.6rem;
   background-color: #ffbd2e;
   top: 0; }
 
-.bar-dot::after {
+.bar__dot::after {
   content: " ";
   left: 3.2rem;
   background-color: #28ca41;

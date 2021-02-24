@@ -3,6 +3,7 @@
 @import "layout";
 @import "animations";
 
+//base styles
 * {
   margin: 0;
   padding: 0;
@@ -16,40 +17,47 @@ body {
   line-height: 1.6;
   background: #fff;
 }
-
 a {
   text-decoration: none;
   color: $dark-color;
 }
-
 ul {
   list-style: none;
 }
-
 h2,
 h3,
 h4 {
   text-transform: uppercase;
 }
-
 img {
   width: 100%;
 }
 
-// Logo
+// Main Nav
+.main-nav {
+  padding-top: 1.6rem;
 
-#logo {
-  width: 7rem;
-  height: 7rem;
-  color: #fff;
-  text-transform: uppercase;
+  li {
+    padding: 1.6rem 2.4rem;
+  }
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.8rem;
+    transition: border-color 0.5s;
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
 }
 
-// Main Nav
-
 //header
-
-#header {
+.header {
   &-home {
     position: relative;
     background: $bg-image no-repeat center right/cover;
@@ -60,8 +68,7 @@ img {
     .container {
       padding-bottom: 5rem;
     }
-    //header content
-    .header-content {
+    &__content {
       text-align: center;
       padding-top: 20%;
       h1 {
@@ -86,93 +93,62 @@ img {
     border-bottom: 3px solid $main-color;
   }
 }
-#main {
-  &-nav {
-    padding-top: 1.6rem;
-
-    li {
-      padding: 1.6rem 2.4rem;
-    }
-    a {
-      text-decoration: none;
-      color: #ffffff;
-      text-transform: uppercase;
-      border-bottom: 3px transparent solid;
-      padding-bottom: 0.8rem;
-      transition: border-color 0.5s;
-      &:hover {
-        border-color: $medium-color;
-      }
-      &.current {
-        border-color: $main-color;
-      }
-    }
-  }
-}
 
 //About page
-#about {
-  &-a {
-    .about {
-      &-content {
-        display: flex;
-      }
-      &-image {
-        width: 15%;
-        height: auto;
-        object-fit: cover;
-      }
-      &-main-text-wrapper {
-        width: 85%;
-        border-left: 3px solid $main-color;
-        margin-left: 2.4rem;
-        padding: 1.5rem;
-      }
-      &-main-text {
-        width: 90%;
-        margin: 0 auto;
-        text-align: left;
-      }
-      &-title {
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-      &-quote {
-        margin: 2.5rem 0 0 6rem;
-      }
-      &-author {
-        display: block;
-        margin-right: 7rem;
-        text-align: right;
-      }
+.bio {
+  display: flex;
+  &__image {
+    width: 15%;
+    height: auto;
+    object-fit: cover;
+  }
+  &__container {
+    width: 85%;
+    border-left: 3px solid $main-color;
+    margin-left: 2.4rem;
+    padding: 1.5rem;
+  }
+  &__text-wrap {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  &__quote {
+    margin: 2.5rem 0 0 6rem;
+  }
+  &__author {
+    display: block;
+    margin-right: 7rem;
+    text-align: right;
+  }
+}
+.course-list {
+  &__logo {
+    display: inline-block;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 15rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+  }
+  &__items {
+    > li {
+      display: inline-block;
+      padding: 1rem;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      border: 1px solid $dark-color;
+      color: $main-color;
+      margin: 1rem;
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
     }
   }
-  &-b {
-    .specials {
-      &-logo {
-        display: inline-block;
-        padding: 2rem;
-        margin-bottom: 1rem;
-        border-radius: 15rem;
-        box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
-      }
-      &-courses-list {
-        > li {
-          display: inline-block;
-          padding: 1rem;
-          text-transform: uppercase;
-          border-radius: 1rem;
-          border: 1px solid $dark-color;
-          color: $main-color;
-          margin: 1rem;
-          box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-        }
-      }
-    }
-    .fas,
-    .fab {
-      color: $main-color;
-    }
+  .fas,
+  .fab {
+    color: $main-color;
   }
 }
 
@@ -191,19 +167,19 @@ img {
   position: absolute;
 }
 .bar {
-  &-dot {
+  &__dot {
     @extend %bar-shared;
     left: 1rem;
     background-color: #ff5f57;
   }
-  &-dot::before {
+  &__dot::before {
     @extend %bar-shared;
     content: " ";
     left: 1.6rem;
     background-color: #ffbd2e;
     top: 0;
   }
-  &-dot::after {
+  &__dot::after {
     @extend %bar-shared;
     content: " ";
     left: 3.2rem;
