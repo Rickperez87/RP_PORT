@@ -52,17 +52,7 @@ img {
 #header {
   &-home {
     position: relative;
-    // background: $bg-image no-repeat center right/cover;
-    background: radial-gradient(
-        circle,
-        rgba(0, 0, 0, 0.25) 0%,
-        rgba(0, 0, 0, 0) 55%,
-        rgba(0, 0, 0, 0) 100%
-      ),
-      $bg-image;
-    background-position: center/right;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: $bg-image no-repeat center right/cover;
     height: 100vh;
     color: #fff;
 
@@ -90,7 +80,7 @@ img {
   }
   &-about,
   &-work {
-    background: $bg-image no-repeat 20% 8% / cover;
+    background: $bg-image no-repeat 20% 20% / cover;
     color: #fff;
     height: 8.8rem;
     border-bottom: 3px solid $main-color;
