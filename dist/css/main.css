@@ -58,7 +58,7 @@ input[class^="btn-"]:hover {
 
 .lead {
   font-size: 2.1rem;
-  margin-bottom: 3.2rem; }
+  margin-bottom: 4.8rem; }
 
 .text-center {
   text-align: center; }
@@ -239,23 +239,22 @@ img {
   margin-right: 7rem;
   text-align: right; }
 
-#about-b .specials {
-  margin-top: 2rem; }
-  #about-b .specials-logo {
-    display: inline-block;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    border-radius: 15rem;
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
-  #about-b .specials-courses-list > li {
-    display: inline-block;
-    padding: 1rem;
-    text-transform: uppercase;
-    border-radius: 1rem;
-    border: 1px solid #333;
-    color: #ffbc00;
-    margin: 1rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
+#about-b .specials-logo {
+  display: inline-block;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 15rem;
+  box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
+
+#about-b .specials-courses-list > li {
+  display: inline-block;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: 1px solid #333;
+  color: #ffbc00;
+  margin: 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
 
 #about-b .fas,
 #about-b .fab {
