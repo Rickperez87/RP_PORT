@@ -31,3 +31,27 @@
     opacity: 1;
   }
 }
+
+.card-flip {
+  display: inline-block;
+  height: 10rem;
+  position: relative;
+  perspective: 150rem;
+  &__face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all 0.8s ease;
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+  &:hover &__face--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__face--back {
+    transform: rotateY(0deg);
+  }
+}
