@@ -32,17 +32,19 @@
   }
 }
 
-.card-flip {
+@mixin card-flip($height, $width, $delay) {
   display: inline-block;
-  height: 10rem;
   position: relative;
   perspective: 150rem;
+  height: $height;
+
   &__face {
     position: absolute;
     top: 0;
     left: 0;
+    width: $width;
     backface-visibility: hidden;
-    transition: all 0.8s ease;
+    transition: all 1.5s ease $delay;
 
     &--back {
       transform: rotateY(180deg);
@@ -54,4 +56,11 @@
   &:hover &__face--back {
     transform: rotateY(0deg);
   }
+}
+
+.coin-flip {
+  @include card-flip(10rem, 10rem, 0s);
+}
+.card-flip {
+  @include card-flip(47.5rem, 100%, 0.9s);
 }
