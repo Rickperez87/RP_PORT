@@ -291,6 +291,7 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     li {
+      opacity: 0;
       display: inline-block;
       padding: 1rem;
       font-weight: bold;
@@ -300,6 +301,11 @@ img {
       color: $main-color;
       margin: 1rem;
       box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+      backface-visibility: hidden;
+      animation-fill-mode: backwards;
+      transform-origin: 50% 50% -10px;
+      transform: rotateX(92deg);
+      transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5);
     }
   }
 }
