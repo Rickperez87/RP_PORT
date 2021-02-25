@@ -61,6 +61,13 @@
     transition: all 0.4s ease-in $delay;
   }
 }
+@mixin smoothDelay($numItems) {
+  @for $i from 1 through $numItems {
+    &:nth-child(#{$i}) {
+      transition-delay: 1.3s+ ($i * (0.06s));
+    }
+  }
+}
 
 .coin-flip {
   @include card-flip(11rem, 11rem, 0s);
@@ -73,12 +80,5 @@
   transform-origin: 0% 0% 0px;
   transform: rotateX(0deg);
   transition-delay: 1.8s;
-
-  // Loop from 1-12.
-  @for $i from 1 through 5 {
-    &:nth-child(#{$i}) {
-      // Delay increases on increase list index
-      transition-delay: 1.3s+ ($i * (0.06s));
-    }
-  }
+  @include smoothDelay(5);
 }
