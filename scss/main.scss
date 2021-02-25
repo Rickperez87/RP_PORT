@@ -135,7 +135,7 @@ img {
     box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
   }
   &__items {
-    > li {
+    li {
       display: inline-block;
       padding: 1rem;
       font-weight: bold;
@@ -276,7 +276,32 @@ img {
 }
 
 .back-item {
-  background-blend-mode: ;
+  position: relative;
+  &-image {
+    height: 49.8rem;
+    background-image: linear-gradient(
+        rgba($dark-color, 0.8),
+        rgba($dark-color, 0.8)
+      ),
+      url("../images/survey-back.jpg");
+  }
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    li {
+      display: inline-block;
+      padding: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 1rem;
+      background: $dark-color;
+      color: $main-color;
+      margin: 1rem;
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 // animations
