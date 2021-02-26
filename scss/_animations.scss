@@ -79,6 +79,17 @@
   opacity: 1;
   transform-origin: 0% 0% 0px;
   transform: rotateX(0deg);
-  transition-delay: 1.8s;
+}
+
+.repo-1 li {
   @include smoothDelay(5);
+}
+.repo-2 li {
+  @include smoothDelay(4);
+}
+.repo-3 li {
+  @include smoothDelay(5);
+}
+.repo-4 li {
+  @include smoothDelay(6);
 }

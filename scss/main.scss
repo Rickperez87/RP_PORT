@@ -279,11 +279,6 @@ img {
   position: relative;
   &-image {
     height: 49.8rem;
-    background-image: linear-gradient(
-        rgba($dark-color, 0.8),
-        rgba($dark-color, 0.8)
-      ),
-      url("../images/survey-back.jpg");
   }
   &__list {
     position: absolute;
@@ -309,6 +304,34 @@ img {
       transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5);
     }
   }
+}
+.image-1 {
+  background-image: linear-gradient(
+      rgba($dark-color, 0.8),
+      rgba($dark-color, 0.8)
+    ),
+    url("../images/survey-back-1x.jpg");
+}
+.image-2 {
+  background-image: linear-gradient(
+      rgba($dark-color, 0.8),
+      rgba($dark-color, 0.8)
+    ),
+    url("../images/emoji-back-1x.jpg");
+}
+.image-3 {
+  background-image: linear-gradient(
+      rgba($dark-color, 0.8),
+      rgba($dark-color, 0.8)
+    ),
+    url("../images/apologeticsqna-back-1x.jpg");
+}
+.image-4 {
+  background-image: linear-gradient(
+      rgba($dark-color, 0.8),
+      rgba($dark-color, 0.8)
+    ),
+    url("../images/full-stack-back-1x.png");
 }
 
 // animations

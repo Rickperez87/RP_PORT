@@ -181,18 +181,67 @@ input[class^="btn-"]:hover {
 .card-flip:hover .back-item__list li {
   opacity: 1;
   transform-origin: 0% 0% 0px;
-  transform: rotateX(0deg);
-  transition-delay: 1.8s; }
-  .card-flip:hover .back-item__list li:nth-child(1) {
-    transition-delay: 1.36s; }
-  .card-flip:hover .back-item__list li:nth-child(2) {
-    transition-delay: 1.42s; }
-  .card-flip:hover .back-item__list li:nth-child(3) {
-    transition-delay: 1.48s; }
-  .card-flip:hover .back-item__list li:nth-child(4) {
-    transition-delay: 1.54s; }
-  .card-flip:hover .back-item__list li:nth-child(5) {
-    transition-delay: 1.6s; }
+  transform: rotateX(0deg); }
+
+.repo-1 li:nth-child(1) {
+  transition-delay: 1.36s; }
+
+.repo-1 li:nth-child(2) {
+  transition-delay: 1.42s; }
+
+.repo-1 li:nth-child(3) {
+  transition-delay: 1.48s; }
+
+.repo-1 li:nth-child(4) {
+  transition-delay: 1.54s; }
+
+.repo-1 li:nth-child(5) {
+  transition-delay: 1.6s; }
+
+.repo-2 li:nth-child(1) {
+  transition-delay: 1.36s; }
+
+.repo-2 li:nth-child(2) {
+  transition-delay: 1.42s; }
+
+.repo-2 li:nth-child(3) {
+  transition-delay: 1.48s; }
+
+.repo-2 li:nth-child(4) {
+  transition-delay: 1.54s; }
+
+.repo-3 li:nth-child(1) {
+  transition-delay: 1.36s; }
+
+.repo-3 li:nth-child(2) {
+  transition-delay: 1.42s; }
+
+.repo-3 li:nth-child(3) {
+  transition-delay: 1.48s; }
+
+.repo-3 li:nth-child(4) {
+  transition-delay: 1.54s; }
+
+.repo-3 li:nth-child(5) {
+  transition-delay: 1.6s; }
+
+.repo-4 li:nth-child(1) {
+  transition-delay: 1.36s; }
+
+.repo-4 li:nth-child(2) {
+  transition-delay: 1.42s; }
+
+.repo-4 li:nth-child(3) {
+  transition-delay: 1.48s; }
+
+.repo-4 li:nth-child(4) {
+  transition-delay: 1.54s; }
+
+.repo-4 li:nth-child(5) {
+  transition-delay: 1.6s; }
+
+.repo-4 li:nth-child(6) {
+  transition-delay: 1.66s; }
 
 * {
   margin: 0;
@@ -413,8 +462,7 @@ img {
 .back-item {
   position: relative; }
   .back-item-image {
-    height: 49.8rem;
-    background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/survey-back.jpg"); }
+    height: 49.8rem; }
   .back-item__list {
     position: absolute;
     width: 60%;
@@ -437,6 +485,18 @@ img {
       transform-origin: 50% 50% -10px;
       transform: rotateX(92deg);
       transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5); }
+
+.image-1 {
+  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/survey-back-1x.jpg"); }
+
+.image-2 {
+  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/emoji-back-1x.jpg"); }
+
+.image-3 {
+  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/apologeticsqna-back-1x.jpg"); }
+
+.image-4 {
+  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/full-stack-back-1x.png"); }
 
 .move-in-left {
   animation: moveInLeft 0.75s ease-out; }
