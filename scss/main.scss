@@ -136,21 +136,26 @@ img {
   }
   &__items {
     li {
-      display: inline-block;
-      padding: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-radius: 1rem;
-      border: 1px solid $dark-color;
-      color: $main-color;
-      margin: 1rem;
-      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+      @extend %list-shared;
     }
   }
   .fas,
   .fab {
     color: $main-color;
   }
+}
+
+//extendable list style
+%list-shared {
+  display: inline-block;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: 1px solid $dark-color;
+  color: $main-color;
+  margin: 1rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 // bar for work cards
@@ -287,22 +292,22 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
     li {
+      // list styles
+      @extend %list-shared;
+      // list appear animation
+      @extend %swing-down;
       opacity: 0;
-      display: inline-block;
-      padding: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-radius: 1rem;
       background: $dark-color;
-      color: $main-color;
-      margin: 1rem;
-      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-      backface-visibility: hidden;
-      animation-fill-mode: backwards;
-      transform-origin: 50% 50% -10px;
-      transform: rotateX(92deg);
-      transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5);
     }
+  }
+  &__more {
+    // @extend %list-shared;
+    // @extend %swing-down;
+    position: absolute;
+    // background: $dark-color;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .image-1 {

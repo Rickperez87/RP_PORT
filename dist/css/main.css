@@ -183,6 +183,13 @@ input[class^="btn-"]:hover {
   transform-origin: 0% 0% 0px;
   transform: rotateX(0deg); }
 
+.back-item__list li {
+  backface-visibility: hidden;
+  animation-fill-mode: backwards;
+  transform-origin: 50% 50% -10px;
+  transform: rotateX(92deg);
+  transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5); }
+
 .repo-1 li:nth-child(1) {
   transition-delay: 1.36s; }
 
@@ -209,6 +216,9 @@ input[class^="btn-"]:hover {
 
 .repo-2 li:nth-child(4) {
   transition-delay: 1.54s; }
+
+.repo-2 li:nth-child(5) {
+  transition-delay: 1.6s; }
 
 .repo-3 li:nth-child(1) {
   transition-delay: 1.36s; }
@@ -345,7 +355,11 @@ img {
   border-radius: 15rem;
   box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
 
-.course-list__items li {
+.course-list .fas,
+.course-list .fab {
+  color: #ffbc00; }
+
+.course-list__items li, .back-item__list li {
   display: inline-block;
   padding: 1rem;
   font-weight: bold;
@@ -355,10 +369,6 @@ img {
   color: #ffbc00;
   margin: 1rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
-
-.course-list .fas,
-.course-list .fab {
-  color: #ffbc00; }
 
 .bar {
   position: sticky;
@@ -471,20 +481,12 @@ img {
     transform: translate(-50%, -50%); }
     .back-item__list li {
       opacity: 0;
-      display: inline-block;
-      padding: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-radius: 1rem;
-      background: #333;
-      color: #ffbc00;
-      margin: 1rem;
-      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-      backface-visibility: hidden;
-      animation-fill-mode: backwards;
-      transform-origin: 50% 50% -10px;
-      transform: rotateX(92deg);
-      transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5); }
+      background: #333; }
+  .back-item__more {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .image-1 {
   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/survey-back-1x.jpg"); }
