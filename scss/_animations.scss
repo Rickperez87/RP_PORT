@@ -64,6 +64,7 @@
 
 .coin-flip {
   @include card-flip(11rem, 11rem, 0s);
+  width: 11rem;
 }
 .card-flip {
   @include card-flip(49.8rem, 100%, 0.8s);

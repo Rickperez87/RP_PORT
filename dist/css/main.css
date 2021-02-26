@@ -136,7 +136,8 @@ input[class^="btn-"]:hover {
   display: inline-block;
   position: relative;
   perspective: 150rem;
-  height: 11rem; }
+  height: 11rem;
+  width: 11rem; }
   .coin-flip__face {
     position: absolute;
     top: 0;
@@ -528,3 +529,8 @@ img {
   animation: fadeIn 0.4s ease-in;
   animation-delay: 0.5s;
   animation-fill-mode: backwards; }
+
+.svg {
+  background: url("../images/Programming.svg") no-repeat top left;
+  background-size: contain;
+  height: 20rem; }
