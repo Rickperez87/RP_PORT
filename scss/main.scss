@@ -301,15 +301,18 @@ img {
     }
   }
   &__more {
-    // @extend %list-shared;
-    // @extend %swing-down;
-    position: absolute;
-    // background: $dark-color;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    @extend %list-shared;
+    @extend %swing-down;
+    background: $dark-color;
+    opacity: 0;
+    position: relative;
+    top: -14rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
+
 .image-1 {
   background-image: linear-gradient(
       rgba($dark-color, 0.8),
