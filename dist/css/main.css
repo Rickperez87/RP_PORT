@@ -60,6 +60,16 @@ input[class^="btn-"]:hover {
   font-size: 2.1rem;
   margin-bottom: 4.8rem; }
 
+.strong {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  margin: 1rem 0; }
+
+.sub {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 800; }
+
 .text-center {
   text-align: center; }
 
@@ -89,6 +99,9 @@ input[class^="btn-"]:hover {
 
 .py-4 {
   padding: 6.4rem 0; }
+
+.svg-box {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .l-flex-sb {
   display: flex;
@@ -530,7 +543,62 @@ img {
   animation-delay: 0.5s;
   animation-fill-mode: backwards; }
 
-.svg {
-  background: url("../images/Programming.svg") no-repeat top left;
-  background-size: contain;
-  height: 20rem; }
+.svg-box {
+  position: relative;
+  padding: 6.2rem;
+  width: 47rem;
+  height: 22rem;
+  color: #fff; }
+  .svg-box .svg {
+    background: url("../images/Programming-1x.svg") no-repeat top left;
+    background-size: contain;
+    height: 8rem;
+    margin: 3.8rem 0 1rem 6.8rem; }
+  .svg-box__lrg-text {
+    display: inline-block;
+    font-size: 5rem;
+    position: absolute;
+    font-weight: 600;
+    width: 24rem;
+    height: 9rem;
+    margin: 5rem 6.8rem 1rem 0;
+    line-height: 0.9;
+    top: 4.5rem;
+    right: 3rem;
+    text-transform: uppercase; }
+  .svg-box__sub-text {
+    font-size: 2.4rem;
+    font-weight: 500;
+    width: 34rem;
+    height: 9rem;
+    margin: 0.5rem 0 0 5rem;
+    top: 4.5rem;
+    right: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem; }
+
+.contact-box {
+  background: #333;
+  width: 76.5rem;
+  height: 34.4rem;
+  position: absolute;
+  top: 15rem;
+  right: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .contact-box ul {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff; }
+    .contact-box ul li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+
+.main-wrapper {
+  position: relative;
+  height: 50rem; }

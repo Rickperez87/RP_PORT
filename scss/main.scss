@@ -359,8 +359,70 @@ img {
 
 //contact
 
-.svg {
-  background: url("../images/Programming.svg") no-repeat top left;
-  background-size: contain;
-  height: 20rem;
+.svg-box {
+  position: relative;
+  padding: 6.2rem;
+  width: 47rem;
+  height: 22rem;
+  color: #fff;
+  @extend %shadow;
+  .svg {
+    background: url("../images/Programming-1x.svg") no-repeat top left;
+    background-size: contain;
+    height: 8rem;
+    margin: 3.8rem 0 1rem 6.8rem;
+  }
+  &__lrg-text {
+    display: inline-block;
+    font-size: 5rem;
+    position: absolute;
+    font-weight: 600;
+    width: 24rem;
+    height: 9rem;
+    margin: 5rem 6.8rem 1rem 0;
+    line-height: 0.9;
+    top: 4.5rem;
+    right: 3rem;
+    text-transform: uppercase;
+  }
+  &__sub-text {
+    font-size: 2.4rem;
+    font-weight: 500;
+    width: 34rem;
+    height: 9rem;
+    margin: 0.5rem 0 0 5rem;
+    top: 4.5rem;
+    right: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+}
+.contact-box {
+  background: #333;
+  width: 76.5rem;
+  height: 34.4rem;
+  // margin: -10rem 0 0 10rem;
+  position: absolute;
+  top: 15rem;
+  right: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.main-wrapper {
+  position: relative;
+  height: 50rem;
 }
