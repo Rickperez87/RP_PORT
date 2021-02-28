@@ -548,6 +548,7 @@ img {
   padding: 6.2rem;
   width: 47rem;
   height: 22rem;
+  background: #333;
   color: #fff; }
   .svg-box .svg {
     background: url("../images/Programming-1x.svg") no-repeat top left;
@@ -578,10 +579,9 @@ img {
     letter-spacing: 0.2rem; }
 
 .contact-box {
-  background: #333;
+  background: #f4f4f4;
   width: 76.5rem;
   height: 34.4rem;
-  position: absolute;
   top: 15rem;
   right: 0rem;
   display: flex;
@@ -592,7 +592,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff; }
+    color: #333; }
     .contact-box ul li {
       display: flex;
       flex-direction: column;
@@ -601,4 +601,6 @@ img {
 
 .main-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
   height: 50rem; }

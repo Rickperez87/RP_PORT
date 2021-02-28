@@ -364,6 +364,7 @@ img {
   padding: 6.2rem;
   width: 47rem;
   height: 22rem;
+  background: #333;
   color: #fff;
   @extend %shadow;
   .svg {
@@ -398,11 +399,11 @@ img {
   }
 }
 .contact-box {
-  background: #333;
+  background: #f4f4f4;
   width: 76.5rem;
   height: 34.4rem;
   // margin: -10rem 0 0 10rem;
-  position: absolute;
+  // position: absolute;
   top: 15rem;
   right: 0rem;
   display: flex;
@@ -413,7 +414,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: #333;
     li {
       display: flex;
       flex-direction: column;
@@ -424,5 +425,7 @@ img {
 }
 .main-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
   height: 50rem;
 }
