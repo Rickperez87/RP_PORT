@@ -100,9 +100,6 @@ input[class^="btn-"]:hover {
 .py-4 {
   padding: 6.4rem 0; }
 
-.svg-box {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
 .l-flex-sb {
   display: flex;
   align-items: center;
@@ -545,34 +542,44 @@ img {
 
 .svg-box {
   position: relative;
-  padding: 6.2rem;
+  padding: 4rem;
   width: 47rem;
   height: 22rem;
   background: #333;
-  color: #fff; }
-  .svg-box .svg {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .svg-box__heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .svg-box__svg {
     background: url("../images/Programming-1x.svg") no-repeat top left;
     background-size: contain;
-    height: 8rem;
-    margin: 3.8rem 0 1rem 6.8rem; }
+    width: 15rem;
+    height: 10rem; }
   .svg-box__lrg-text {
-    display: inline-block;
     font-size: 5rem;
-    position: absolute;
     font-weight: 600;
     width: 24rem;
     height: 9rem;
-    margin: 5rem 6.8rem 1rem 0;
     line-height: 0.9;
     top: 4.5rem;
     right: 3rem;
     text-transform: uppercase; }
+  .svg-box__underline {
+    background: #ffbc00;
+    height: 0.4rem;
+    width: 95%;
+    border-radius: 150rem; }
   .svg-box__sub-text {
     font-size: 2.4rem;
     font-weight: 500;
     width: 34rem;
     height: 9rem;
-    margin: 0.5rem 0 0 5rem;
+    margin: 0 auto;
     top: 4.5rem;
     right: 3rem;
     text-transform: uppercase;
@@ -581,18 +588,18 @@ img {
 .contact-box {
   background: #f4f4f4;
   width: 76.5rem;
-  height: 34.4rem;
-  top: 15rem;
-  right: 0rem;
+  height: 30rem;
   display: flex;
   align-items: center;
   justify-content: center; }
   .contact-box ul {
     width: 70%;
     display: flex;
+    flex: 1 1 0px;
     align-items: center;
     justify-content: space-between;
-    color: #333; }
+    color: #333;
+    padding: 0 4rem; }
     .contact-box ul li {
       display: flex;
       flex-direction: column;
@@ -603,4 +610,6 @@ img {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  height: 50rem; }
+  height: 50rem;
+  align-items: center;
+  justify-content: center; }

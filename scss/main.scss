@@ -361,37 +361,49 @@ img {
 
 .svg-box {
   position: relative;
-  padding: 6.2rem;
+  padding: 4rem;
   width: 47rem;
   height: 22rem;
   background: #333;
   color: #fff;
-  @extend %shadow;
-  .svg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // @extend %shadow;
+  &__heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__svg {
     background: url("../images/Programming-1x.svg") no-repeat top left;
     background-size: contain;
-    height: 8rem;
-    margin: 3.8rem 0 1rem 6.8rem;
+    width: 15rem;
+    height: 10rem;
   }
   &__lrg-text {
-    display: inline-block;
     font-size: 5rem;
-    position: absolute;
     font-weight: 600;
     width: 24rem;
     height: 9rem;
-    margin: 5rem 6.8rem 1rem 0;
     line-height: 0.9;
     top: 4.5rem;
     right: 3rem;
     text-transform: uppercase;
+  }
+  &__underline {
+    background: $main-color;
+    height: 0.4rem;
+    width: 95%;
+    border-radius: 150rem;
   }
   &__sub-text {
     font-size: 2.4rem;
     font-weight: 500;
     width: 34rem;
     height: 9rem;
-    margin: 0.5rem 0 0 5rem;
+    margin: 0 auto;
     top: 4.5rem;
     right: 3rem;
     text-transform: uppercase;
@@ -401,20 +413,18 @@ img {
 .contact-box {
   background: #f4f4f4;
   width: 76.5rem;
-  height: 34.4rem;
-  // margin: -10rem 0 0 10rem;
-  // position: absolute;
-  top: 15rem;
-  right: 0rem;
+  height: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
   ul {
     width: 70%;
     display: flex;
+    flex: 1 1 0px;
     align-items: center;
     justify-content: space-between;
     color: #333;
+    padding: 0 4rem;
     li {
       display: flex;
       flex-direction: column;
@@ -428,4 +438,6 @@ img {
   display: flex;
   flex-direction: row-reverse;
   height: 50rem;
+  align-items: center;
+  justify-content: center;
 }
