@@ -578,7 +578,6 @@ img {
     font-size: 2.4rem;
     font-weight: 500;
     width: 34rem;
-    height: 9rem;
     margin: 0 auto;
     top: 4.5rem;
     right: 3rem;
@@ -591,15 +590,12 @@ img {
   height: 30rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  padding: 0 4rem; }
   .contact-box ul {
-    width: 70%;
-    display: flex;
-    flex: 1 1 0px;
-    align-items: center;
-    justify-content: space-between;
-    color: #333;
-    padding: 0 4rem; }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #333; }
     .contact-box ul li {
       display: flex;
       flex-direction: column;
@@ -610,6 +606,6 @@ img {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  height: 50rem;
+  height: 30rem;
   align-items: center;
   justify-content: center; }
