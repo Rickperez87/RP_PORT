@@ -584,6 +584,11 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.2rem; }
 
+.contact-box__svg--email, .contact-box__svg--phone, .contact-box__svg--location {
+  background-size: contain;
+  width: 100%;
+  height: 7rem; }
+
 .contact-box {
   background: #f4f4f4;
   width: 76.5rem;
@@ -595,12 +600,19 @@ img {
   .contact-box ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    color: #333; }
+    color: #333;
+    height: 100%; }
     .contact-box ul li {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+  .contact-box__svg--email {
+    background: url("../images/imac-1x.svg") no-repeat center; }
+  .contact-box__svg--phone {
+    background: url("../images/phone-1x.svg") no-repeat center; }
+  .contact-box__svg--location {
+    background: url("../images/map-1x.svg") no-repeat center; }
 
 .main-wrapper {
   position: relative;
