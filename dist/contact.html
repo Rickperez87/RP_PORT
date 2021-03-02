@@ -47,7 +47,10 @@
                       </div>
                         <span class="strong">Email</span>
                         <span class="sub">Rickperez87@gmail.com</span>
-                      </li>
+                        <button class="copy-to-clipboard" data-clipboard-text="Rickperez87@gmail.com" onClick="clipToBoard()">
+                          <img src="assets/clippy.svg" alt="Copy to clipboard">
+                      </button>
+                </li>
                     <li><div class="contact-box__svg--phone"></div><span class="strong">Phone</span><span class="sub">(323) 253-9705</span></li>
                     <li><div class="contact-box__svg--location"></div><span class="strong">Address</span><span class="sub">Fairfax, VA</span></li>
                 </ul>
@@ -61,5 +64,7 @@
       </div>
     </div>
     </section>
+    <!-- Copy to Clipboard   -->
+    <script src="./js/clipboardHelper.js"></script>
   </body>
 </html>
