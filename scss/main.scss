@@ -435,7 +435,11 @@ img {
       justify-content: center;
     }
   }
-
+  &__btn {
+    border-left: 1px solid #000;
+    height: 100%;
+    width: 100%;
+  }
   &__svg--email {
     @extend %contact-box__svg--shared;
     background: url("../images/imac-1x.svg") no-repeat center;
@@ -447,6 +451,30 @@ img {
   &__svg--location {
     @extend %contact-box__svg--shared;
     background: url("../images/map-1x.svg") no-repeat center;
+  }
+}
+.copy-email {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.7rem;
+  width: 40%;
+  margin: 1rem 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  &:hover {
+    cursor: pointer;
+    border-bottom: 3px solid $main-color;
+  }
+  .far {
+    font-size: 1.8rem;
+  }
+  // span {
+  //   margin-top: 3px;
+  // }
+  & + span {
+    margin-top: -3px;
   }
 }
 .main-wrapper {
