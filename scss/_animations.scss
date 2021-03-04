@@ -59,6 +59,7 @@
   &:hover &__face--back {
     transform: rotateY(0deg);
     transition: all 0.4s ease-in $delay;
+    cursor: pointer;
   }
 }
 
