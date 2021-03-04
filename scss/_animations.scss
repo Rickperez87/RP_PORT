@@ -45,7 +45,7 @@
     width: $width;
     height: $height;
     backface-visibility: hidden;
-    transition: all 0.2s ease-out 0s;
+    transition: all 0.1s ease-in 0s;
     overflow: hidden;
 
     &--back {
@@ -67,7 +67,7 @@
   width: 11rem;
 }
 .card-flip {
-  @include card-flip(49.8rem, 100%, 0.8s);
+  @include card-flip(49.8rem, 100%, 0s);
 }
 .card-flip:hover .back-item__list li {
   opacity: 1;
@@ -91,12 +91,12 @@
 @mixin smoothDelay($numItems) {
   @for $i from 1 through $numItems {
     &:nth-child(#{$i}) {
-      transition-delay: 1.3s+ ($i * (0.06s));
+      transition-delay: 0.6s+ ($i * (0.06s));
     }
   }
 }
 @mixin smoothDelaySingle($position) {
-  transition-delay: 1.4s+ ($position * (0.06s));
+  transition-delay: 0.7s+ ($position * (0.06s));
 }
 .repo-1 li {
   @include smoothDelay(5);
