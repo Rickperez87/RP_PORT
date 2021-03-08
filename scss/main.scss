@@ -77,7 +77,7 @@ img {
       }
       .btn-light:hover {
         transform: translateY(-3px);
-        box-shadow: 0 1rm 2rem rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
       }
       .btn-light:active {
         transform: translateY(-1px);
@@ -490,4 +490,12 @@ img {
 .main-image {
   width: 100%;
   margin: 0 auto;
+}
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.btn-main:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
