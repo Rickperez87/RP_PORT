@@ -436,6 +436,9 @@ img {
     border-left: 1px solid #000;
     height: 100%;
     width: 100%;
+    &:active .tooltip {
+      opacity: 1;
+    }
   }
   &__svg--email {
     @extend %contact-box__svg--shared;

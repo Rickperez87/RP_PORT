@@ -152,3 +152,14 @@ input[class^="btn-"]:hover {
 %shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
+.tooltip {
+  background: $dark-color;
+  color: $light-color;
+  padding: 1rem;
+  font-weight: bold;
+  position: absolute;
+  &-target {
+    position: relative;
+  }
+}

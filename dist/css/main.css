@@ -123,6 +123,15 @@ input[class^="btn-"]:hover {
 .py-4 {
   padding: 6.4rem 0; }
 
+.tooltip {
+  background: #333;
+  color: #f4f4f4;
+  padding: 1rem;
+  font-weight: bold;
+  position: absolute; }
+  .tooltip-target {
+    position: relative; }
+
 .l-flex-sb {
   display: flex;
   align-items: center;
@@ -589,6 +598,8 @@ img {
     border-left: 1px solid #000;
     height: 100%;
     width: 100%; }
+    .contact-box__btn:active .tooltip {
+      opacity: 1; }
   .contact-box__svg--email {
     background: url("../images/imac-1x.svg") no-repeat center; }
   .contact-box__svg--phone {
