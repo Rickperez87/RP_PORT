@@ -344,7 +344,7 @@ img {
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.header-about, .header-work {
+.header-top {
   background: url("../images/bg-img-sml-crop.jpg") no-repeat 20% 20%/cover;
   color: #fff;
   height: 8.8rem;
