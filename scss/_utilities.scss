@@ -54,13 +54,22 @@ input[class^="btn-"]:hover {
   transition: all 0.2s;
 }
 
-.section-title {
+%title-shared {
   font-size: 3.2rem;
   display: block;
-  padding-bottom: 0.8rem;
-  text-align: center;
   font-weight: 100;
   text-transform: uppercase;
+}
+
+.section-title {
+  @extend %title-shared;
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+.project-title {
+  @extend %title-shared;
+  padding-bottom: 0.4rem;
+  text-align: left;
 }
 
 .line {
@@ -70,10 +79,21 @@ input[class^="btn-"]:hover {
   height: 0.2rem;
   width: 4.8rem;
 }
+.project-line {
+  background: $main-color;
+  display: block;
+  margin: 0 0 1.6rem 0;
+  height: 0.1rem;
+  width: 40.8rem;
+}
 
 .lead {
   font-size: 2.1rem;
   margin-bottom: 4.8rem;
+}
+.project-lead {
+  font-size: 2.1rem;
+  margin-bottom: 1.6rem;
 }
 .strong {
   font-size: 2.5rem;
@@ -89,7 +109,12 @@ input[class^="btn-"]:hover {
 .text-center {
   text-align: center;
 }
-
+.text-left {
+  text-align: left;
+}
+.project-width {
+  max-width: 108rem;
+}
 //type writer animation
 .blinking-cursor {
   color: #2e3d48;
