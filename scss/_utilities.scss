@@ -159,18 +159,19 @@ input[class^="btn-"]:hover {
   padding: 1rem;
   font-weight: bold;
   position: absolute;
-  top: 65%;
-  left: 50%;
+  width: 15rem;
+  left: 21.5rem;
+  top: 1rem;
   transform: translateX(-50%);
   &::before {
     content: " ";
     position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent $dark-color transparent;
+    border-color: transparent $dark-color transparent transparent;
   }
   &-target {
     position: relative;

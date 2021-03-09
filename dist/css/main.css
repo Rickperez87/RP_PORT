@@ -129,18 +129,19 @@ input[class^="btn-"]:hover {
   padding: 1rem;
   font-weight: bold;
   position: absolute;
-  top: 65%;
-  left: 50%;
+  width: 15rem;
+  left: 21.5rem;
+  top: 1rem;
   transform: translateX(-50%); }
   .tooltip::before {
     content: " ";
     position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #333 transparent; }
+    border-color: transparent #333 transparent transparent; }
   .tooltip-target {
     position: relative; }
 
@@ -620,13 +621,14 @@ img {
     background: url("../images/map-1x.svg") no-repeat center; }
 
 .copy-email {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   height: 3.7rem;
   width: 40%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-bottom: 3px solid transparent;
   transition: all 0.3s; }
   .copy-email:hover {
