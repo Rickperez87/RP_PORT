@@ -128,7 +128,19 @@ input[class^="btn-"]:hover {
   color: #f4f4f4;
   padding: 1rem;
   font-weight: bold;
-  position: absolute; }
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%); }
+  .tooltip::before {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent; }
   .tooltip-target {
     position: relative; }
 

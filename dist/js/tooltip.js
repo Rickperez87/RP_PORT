@@ -1,7 +1,14 @@
+window.onload = tooltip("Copied to Clipboard!", ".tooltip-target");
+
 function tooltip(text, querySelectorParent) {
-  let tooltip = document.createElement("div");
-  tooltip.setAttribute("class", "tooltip");
-  tooltip.setAttribute("value", text);
   let parentElement = document.querySelector(querySelectorParent);
-  parentElement.appendChild(tooltip);
+  document.addEventListener("click", () => {
+    let tooltip = document.createElement("div");
+    tooltip.setAttribute("class", "tooltip");
+    tooltip.innerHTML = text;
+    parentElement.appendChild(tooltip);
+    setTimeout(() => {
+      parentElement.removeChild(tooltip);
+    }, 800);
+  });
 }
