@@ -460,12 +460,14 @@ img {
   justify-content: space-between;
   height: 3.7rem;
   width: 40%;
-  margin: 1rem 0;
+  // margin: 1rem 0;
+  padding: 1rem 1.5rem;
   border-bottom: 3px solid transparent;
   transition: all 0.3s;
   &:hover {
     cursor: pointer;
-    border-bottom: 3px solid $main-color;
+    // border-bottom: 3px solid $main-color;
+    background: $main-color;
   }
   .far {
     font-size: 1.8rem;
