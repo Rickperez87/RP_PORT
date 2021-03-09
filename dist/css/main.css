@@ -657,9 +657,23 @@ img {
   margin: 0 auto; }
 
 .btn-main:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn-main:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.project__text, .project li {
+  font-weight: lighter;
+  font-size: 2rem;
+  letter-spacing: 0.08rem; }
+
+.project__text span {
+  display: block; }
+  .project__text span:not(:last-child) {
+    margin-bottom: 1.5rem; }
+
+.project li {
+  list-style-type: circle;
+  list-style-position: inside; }
