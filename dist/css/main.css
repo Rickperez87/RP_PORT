@@ -96,21 +96,6 @@ input[class^="btn-"]:hover {
 .project-width {
   max-width: 108rem; }
 
-.blinking-cursor {
-  color: #2e3d48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite; }
-
-@keyframes blink {
-  from,
-  to {
-    color: #f4f4f4; }
-  50% {
-    color: transparent; } }
-
 .py-1 {
   padding: 1.6rem 0; }
 
@@ -162,6 +147,19 @@ input[class^="btn-"]:hover {
 
 .grid-4 {
   grid-template-columns: repeat(4, 1fr); }
+
+.move-in-left {
+  animation: moveInLeft 0.75s ease-out; }
+
+.move-in-bottom {
+  animation: moveInBottom 0.7s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: backwards; }
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards; }
 
 @keyframes moveInLeft {
   0% {
@@ -325,6 +323,21 @@ input[class^="btn-"]:hover {
 .back-item__more--4 {
   transition-delay: 1.12s; }
 
+.blinking-cursor {
+  color: #2e3d48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite; }
+
+@keyframes blink {
+  from,
+  to {
+    color: #f4f4f4; }
+  50% {
+    color: transparent; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -398,11 +411,11 @@ img {
 .bio {
   display: flex; }
   .bio__image {
-    width: 15%;
-    height: auto;
+    width: 35%;
+    height: 30rem;
     object-fit: cover; }
   .bio__container {
-    width: 85%;
+    width: 65%;
     border-left: 3px solid #ffbc00;
     margin-left: 2.4rem;
     padding: 1.5rem; }
@@ -410,9 +423,18 @@ img {
     width: 90%;
     margin: 0 auto;
     text-align: left; }
-  .bio__title {
-    margin-bottom: 1rem;
+  .bio .project-title {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 0.7;
     text-align: center; }
+  .bio__text {
+    font-weight: lighter;
+    font-size: 1.8rem;
+    letter-spacing: 0.08rem; }
+    .bio__text span {
+      display: block;
+      margin-top: 1rem; }
   .bio__quote {
     margin: 2.5rem 0 0 6rem; }
   .bio__author {
@@ -526,19 +548,6 @@ img {
 
 .image-4 {
   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/full-stack-back-1x.png"); }
-
-.move-in-left {
-  animation: moveInLeft 0.75s ease-out; }
-
-.move-in-bottom {
-  animation: moveInBottom 0.7s ease-in-out;
-  animation-delay: 2s;
-  animation-fill-mode: backwards; }
-
-.fade-in {
-  animation: fadeIn 0.4s ease-in;
-  animation-delay: 0.5s;
-  animation-fill-mode: backwards; }
 
 .svg-box {
   position: relative;

@@ -1,3 +1,18 @@
+// animation - Home Page
+.move-in-left {
+  animation: moveInLeft 0.75s ease-out;
+}
+.move-in-bottom {
+  animation: moveInBottom 0.7s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+.fade-in {
+  animation: fadeIn 0.4s ease-in;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
 @keyframes moveInLeft {
   0% {
     transform: translateX(-100px);
@@ -123,4 +138,23 @@
 }
 .back-item__more--4 {
   @include smoothDelaySingle((7));
+}
+//Type writer animation - Home Page
+.blinking-cursor {
+  color: #2e3d48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: #f4f4f4;
+  }
+  50% {
+    color: transparent;
+  }
 }

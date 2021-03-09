@@ -54,6 +54,7 @@ input[class^="btn-"]:hover {
   transition: all 0.2s;
 }
 
+//Reusable Typography
 %title-shared {
   font-size: 3.2rem;
   display: block;
@@ -106,6 +107,7 @@ input[class^="btn-"]:hover {
   font-weight: 800;
 }
 
+//Reusable alignment utility classes
 .text-center {
   text-align: center;
 }
@@ -114,25 +116,6 @@ input[class^="btn-"]:hover {
 }
 .project-width {
   max-width: 108rem;
-}
-//type writer animation
-.blinking-cursor {
-  color: #2e3d48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-
-@keyframes blink {
-  from,
-  to {
-    color: #f4f4f4;
-  }
-  50% {
-    color: transparent;
-  }
 }
 
 .py {
@@ -153,6 +136,7 @@ input[class^="btn-"]:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+//Tooltip Styles - Contact Page
 .tooltip {
   background: $dark-color;
   color: $light-color;
