@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/392dd575ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rick Perez | Web Developer</title>
+  </head>
+  <body>
+    <header class="header-top">
+      <div class="container">
+        <nav class="main-nav l-flex-sb">
+          <div class="logo"><i class="fas fa-monument fa-2x"></i></div>
+          <ul class="l-flex-sb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="text-left py-3">
+      <div class="container project-width">
+        <h1 class="project-title">Survey App</h1>
+        <p class="project-lead">
+          Realtime survey using React with a Socket.io based Node.js/Express
+          backend.
+        </p>
+
+        <div class="button-box">
+          <a
+            href="https://survey-rp.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-main"
+          >
+            Visit the website
+          </a>
+        </div>
+        <div class="bar">
+          <i class="bar__dot"></i>
+        </div>
+        <div class="main-image">
+          <img src="./images/emoji-front-1x.jpg" alt="Emoji Search App" />
+        </div>
+      </div>
+    </section>
+    <section class="text-left">
+      <div class="container project-width">
+        <h2 class="project-title">About this project</h2>
+        <div class="project-line"></div>
+        <p class="project__text">
+          <span>
+            This project was created to meet a need I had as I mentored youth in
+            the era of meeting through video calls. Many teenagers don't engage
+            willingly using their microphones, so I created a survey app to pose
+            questions and interact with student responses in real-time.
+          </span>
+          <span>
+            To acheive bi-directional event-based communication I built the
+            backend from scratch using Node.js with the Socket.io library. I
+            also used the Material-ui library extensively to speed up styling of
+            react components.
+          </span>
+          <span
+            >Some challenges I had to overcome was understanding React's
+            useEffect hook to re-render, together with Socket.io event-based
+            architecture, at the correct time. Another challenge was learning to
+            use Material-ui globably to get styles across different components
+            and improve reuse.
+          </span>
+        </p>
+      </div>
+    </section>
+    <section class="text-left py-3">
+      <div class="project container project-width">
+        <h2 class="project-title">Technical Sheet</h2>
+        <div class="project-line"></div>
+        <p class="project-lead">
+          Core technologies I used to build this project:
+        </p>
+
+        <ul>
+          <li>React</li>
+          <li>Node.JS</li>
+          <li>Express</li>
+          <li>Sockets.io</li>
+          <li>Material-UI</li>
+          <li>JSS</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
