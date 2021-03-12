@@ -1,27 +1,29 @@
 // mixins
+//media queries
+// 0-600px: Phone
+// 600-900px: Tablet Portrait
+// 900 - 1200px: Tablet Landscape
 
-//extendable style variables
-
-// list style
-%list-shared {
-  display: inline-block;
-  padding: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-radius: 1rem;
-  border: 1px solid $dark-color;
-  color: $main-color;
-  margin: 1rem;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
-}
-%contact-box__svg--shared {
-  background-size: contain;
-  width: 100%;
-  height: 7rem;
-}
-
-%paragraph-text-shared {
-  font-weight: lighter;
-  font-size: 2rem;
-  letter-spacing: 0.08rem;
+// 1800px+: big-desktop
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
 }
