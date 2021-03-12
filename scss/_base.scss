@@ -1,0 +1,38 @@
+//variables
+$website-width: 128rem;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+
+$bg-image: url("../images/bg-img-sml-crop.jpg");
+
+//base styles
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+ul {
+  list-style: none;
+}
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+img {
+  width: 100%;
+}

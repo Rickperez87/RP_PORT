@@ -1,0 +1,130 @@
+.container {
+  max-width: $website-width;
+  padding: 0 24px;
+  margin: auto;
+  overflow: hidden;
+}
+.l-flex-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%grid-shared {
+  display: grid;
+  grid-gap: 1.6rem;
+}
+.grid-2 {
+  @extend %grid-shared;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  @extend %grid-shared;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  @extend %grid-shared;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+//header
+.header {
+  &-home {
+    position: relative;
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+
+    //padding to allow box shadow on header button
+    .container {
+      padding-bottom: 5rem;
+    }
+    &__content {
+      text-align: center;
+      padding-top: 20%;
+      h1 {
+        font-size: 6.4rem;
+        line-height: 1.6;
+      }
+      .btn-light:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+      }
+      .btn-light:active {
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  &-top {
+    background: $bg-image no-repeat 20% 20% / cover;
+    color: #fff;
+    height: 8.8rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+//contact page
+
+.svg-box {
+  position: relative;
+  padding: 4rem;
+  width: 47rem;
+  height: 22rem;
+  background: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__svg {
+    background: url("../images/Programming-1x.svg") no-repeat top left;
+    background-size: contain;
+    width: 15rem;
+    height: 10rem;
+  }
+}
+.contact-box {
+  background: #f4f4f4;
+  width: 76.5rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #333;
+    height: 100%;
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__svg--email {
+    @extend %contact-box__svg--shared;
+    background: url("../images/imac-1x.svg") no-repeat center;
+  }
+  &__svg--phone {
+    @extend %contact-box__svg--shared;
+    background: url("../images/phone-1x.svg") no-repeat center;
+  }
+  &__svg--location {
+    @extend %contact-box__svg--shared;
+    background: url("../images/map-1x.svg") no-repeat center;
+  }
+}
+.main-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 30rem;
+  align-items: center;
+  justify-content: center;
+}
