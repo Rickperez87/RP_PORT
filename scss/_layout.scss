@@ -41,14 +41,14 @@
     &__content {
       text-align: center;
       padding-top: 20%;
-      @include respond(phone) {
-        padding-top: 60%;
+      @include respond(tab-land) {
+        padding-top: 20%;
       }
       @include respond(tab-port) {
-        padding-top: 45%;
+        padding-top: 25%;
       }
-      @include respond(tab-land) {
-        padding-top: 40%;
+      @include respond(phone) {
+        padding-top: 50%;
       }
 
       h1 {

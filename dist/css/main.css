@@ -176,15 +176,15 @@ img {
   .header-home__content {
     text-align: center;
     padding-top: 20%; }
-    @media (max-width: 37.5em) {
-      .header-home__content {
-        padding-top: 60%; } }
-    @media (max-width: 56.25em) {
-      .header-home__content {
-        padding-top: 45%; } }
     @media (max-width: 75em) {
       .header-home__content {
-        padding-top: 40%; } }
+        padding-top: 20%; } }
+    @media (max-width: 56.25em) {
+      .header-home__content {
+        padding-top: 25%; } }
+    @media (max-width: 37.5em) {
+      .header-home__content {
+        padding-top: 50%; } }
     .header-home__content h1 {
       font-size: 6.4rem;
       line-height: 1.6; }
