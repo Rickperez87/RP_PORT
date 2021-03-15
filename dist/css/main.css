@@ -4,9 +4,6 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 75em) {
-    html {
-      font-size: 70%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 60%; } }
@@ -252,8 +249,19 @@ img {
 
 .main-nav {
   padding-top: 1.6rem; }
+  @media (max-width: 37.5em) {
+    .main-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: black;
+      width: 100%;
+      padding: 1rem 4rem; } }
   .main-nav li {
     padding: 1.6rem 2.4rem; }
+    @media (max-width: 37.5em) {
+      .main-nav li {
+        display: none; } }
   .main-nav a {
     text-decoration: none;
     color: #ffffff;
@@ -265,6 +273,33 @@ img {
       border-color: #ccc; }
     .main-nav a.current {
       border-color: #ffbc00; }
+  .main-nav .nav-menu {
+    position: relative;
+    width: 3rem;
+    height: 2rem; }
+    .main-nav .nav-menu__line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      background: white;
+      height: 0.2rem; }
+    .main-nav .nav-menu__line:before {
+      content: "";
+      background: white;
+      position: absolute;
+      height: 0.2rem;
+      width: 100%;
+      top: 0.5rem;
+      left: 0; }
+    .main-nav .nav-menu__line:after {
+      content: "";
+      background: white;
+      position: absolute;
+      height: 0.2rem;
+      width: 100%;
+      top: -0.5rem;
+      left: 0; }
 
 .bio {
   display: flex; }

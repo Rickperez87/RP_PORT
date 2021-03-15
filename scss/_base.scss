@@ -14,9 +14,7 @@ $bg-image: url("../images/bg-img-sml-crop.jpg");
 }
 html {
   font-size: 62.5%;
-  @include respond(tab-land) {
-    font-size: 70%;
-  }
+
   @include respond(tab-port) {
     font-size: 60%;
   }
