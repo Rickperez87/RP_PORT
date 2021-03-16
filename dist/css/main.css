@@ -173,8 +173,6 @@ img {
   background: url("../images/bg-img-sml-crop.jpg") no-repeat center right/cover;
   min-height: 100vh;
   color: #fff; }
-  .header-home .container {
-    padding-bottom: 5rem; }
   .header-home__content {
     height: 80vh;
     text-align: center;
@@ -286,14 +284,17 @@ img {
   .main-nav li {
     display: none; } }
 
-@media (max-width: 37.5em) {
-  .mobile-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: black;
-    width: 100%;
-    padding: 2rem 4rem; } }
+.mobile-nav {
+  display: none; }
+  @media (max-width: 37.5em) {
+    .mobile-nav {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: #333;
+      width: 100%;
+      padding: 2rem 4rem; } }
 
 .bio {
   display: flex;

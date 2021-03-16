@@ -29,11 +29,13 @@
   }
 }
 .mobile-nav {
+  display: none;
   @include respond(phone) {
-    position: absolute;
+    display: block;
+    position: fixed;
     bottom: 0;
     left: 0;
-    background: black;
+    background: $dark-color;
     width: 100%;
     padding: 2rem 4rem;
   }
