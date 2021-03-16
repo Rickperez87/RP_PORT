@@ -30,9 +30,13 @@
     }
   }
   .nav-menu {
+    display: none;
     position: relative;
     width: 3rem;
     height: 2rem;
+    @include respond(phone) {
+      display: inline-block;
+    }
     &__line {
       position: absolute;
       top: 50%;
@@ -65,19 +69,35 @@
 //About page
 .bio {
   display: flex;
+  margin: 0 auto;
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
   &__image {
-    width: 35%;
-    height: 30rem;
+    flex: 0 0 35%;
+    height: 35rem;
     object-fit: cover;
+    overflow: hidden;
+    @include respond(tab-land) {
+      width: 70%;
+      flex: 0 0 auto;
+      height: 60rem;
+      margin: 0 auto 3rem;
+    }
   }
   &__container {
-    width: 65%;
+    flex: 1 1 auto;
     border-left: 3px solid $main-color;
     margin-left: 2.4rem;
     padding: 1.5rem;
+    @include respond(tab-land) {
+      flex: 0 1 70%;
+      width: 70%;
+      margin: 0 auto 3rem;
+    }
   }
   &__text-wrap {
-    width: 90%;
+    // width: 90%;
     margin: 0 auto;
     text-align: left;
   }

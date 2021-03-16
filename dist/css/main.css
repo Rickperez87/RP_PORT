@@ -6,7 +6,7 @@ html {
   font-size: 62.5%; }
   @media (max-width: 56.25em) {
     html {
-      font-size: 60%; } }
+      font-size: 50%; } }
   @media (max-width: 37.5em) {
     html {
       font-size: 50%; } }
@@ -274,9 +274,13 @@ img {
     .main-nav a.current {
       border-color: #ffbc00; }
   .main-nav .nav-menu {
+    display: none;
     position: relative;
     width: 3rem;
     height: 2rem; }
+    @media (max-width: 37.5em) {
+      .main-nav .nav-menu {
+        display: inline-block; } }
     .main-nav .nav-menu__line {
       position: absolute;
       top: 50%;
@@ -302,18 +306,33 @@ img {
       left: 0; }
 
 .bio {
-  display: flex; }
+  display: flex;
+  margin: 0 auto; }
+  @media (max-width: 75em) {
+    .bio {
+      flex-direction: column; } }
   .bio__image {
-    width: 35%;
-    height: 30rem;
-    object-fit: cover; }
+    flex: 0 0 35%;
+    height: 35rem;
+    object-fit: cover;
+    overflow: hidden; }
+    @media (max-width: 75em) {
+      .bio__image {
+        width: 70%;
+        flex: 0 0 auto;
+        height: 60rem;
+        margin: 0 auto 3rem; } }
   .bio__container {
-    width: 65%;
+    flex: 1 1 auto;
     border-left: 3px solid #ffbc00;
     margin-left: 2.4rem;
     padding: 1.5rem; }
+    @media (max-width: 75em) {
+      .bio__container {
+        flex: 0 1 70%;
+        width: 70%;
+        margin: 0 auto 3rem; } }
   .bio__text-wrap {
-    width: 90%;
     margin: 0 auto;
     text-align: left; }
 
