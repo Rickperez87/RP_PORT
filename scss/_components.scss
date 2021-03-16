@@ -1,19 +1,10 @@
 // Main Nav
-.main-nav {
+.main-nav,
+.mobile-nav {
   padding-top: 1.6rem;
-  @include respond(phone) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: black;
-    width: 100%;
-    padding: 1rem 4rem;
-  }
+
   li {
     padding: 1.6rem 2.4rem;
-    @include respond(phone) {
-      display: none;
-    }
   }
   a {
     text-decoration: none;
@@ -29,43 +20,24 @@
       border-color: $main-color;
     }
   }
-  .nav-menu {
-    display: none;
-    position: relative;
-    width: 3rem;
-    height: 2rem;
+}
+.main-nav {
+  li {
     @include respond(phone) {
-      display: block;
-    }
-    &__line {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      background: white;
-      height: 0.2rem;
-    }
-    &__line:before {
-      content: "";
-      background: white;
-      position: absolute;
-      height: 0.2rem;
-      width: 100%;
-      top: 0.5rem;
-      left: 0;
-    }
-    &__line:after {
-      content: "";
-      background: white;
-      position: absolute;
-      height: 0.2rem;
-      width: 100%;
-      top: -0.5rem;
-      left: 0;
+      display: none;
     }
   }
 }
-
+.mobile-nav {
+  @include respond(phone) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+}
 //About page
 .bio {
   display: flex;
