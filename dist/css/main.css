@@ -315,7 +315,7 @@ img {
         margin: 0 auto 3rem; } }
     @media (max-width: 37.5em) {
       .bio__image {
-        width: 100%;
+        width: 90%;
         height: auto;
         margin: 0 auto 3rem; } }
   .bio__container {
@@ -330,7 +330,7 @@ img {
         margin: 0 auto 3rem; } }
     @media (max-width: 37.5em) {
       .bio__container {
-        width: 100%;
+        width: 90%;
         height: auto;
         margin: 0 auto 3rem; } }
   .bio__text-wrap {
