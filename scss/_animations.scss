@@ -84,6 +84,9 @@
 }
 .card-flip {
   @include card-flip(49.8rem, 100%, 0s);
+  @include respond(tab-land) {
+    grid-column-start: 2;
+  }
 }
 .card-flip:hover .back-item__list li {
   opacity: 1;

@@ -1,6 +1,7 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   font-size: 62.5%; }
@@ -152,10 +153,14 @@ img {
 
 .grid-2, .grid-3, .grid-4 {
   display: grid;
-  grid-gap: 1.6rem; }
+  grid-gap: 1.6rem;
+  justify-content: center; }
 
 .grid-2 {
   grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 75em) {
+    .grid-2 {
+      grid-template-columns: 2fr 8fr 2fr; } }
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr); }
@@ -166,7 +171,7 @@ img {
 .header-home {
   position: relative;
   background: url("../images/bg-img-sml-crop.jpg") no-repeat center right/cover;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff; }
   .header-home .container {
     padding-bottom: 5rem; }
@@ -196,7 +201,7 @@ img {
 .svg-box {
   position: relative;
   padding: 4rem;
-  width: 47rem;
+  flex: 1 1 47rem;
   height: 22rem;
   background: #333;
   color: #fff;
@@ -204,6 +209,9 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 75em) {
+    .svg-box {
+      align-self: stretch; } }
   .svg-box__heading-wrapper {
     display: flex;
     justify-content: center;
@@ -217,11 +225,15 @@ img {
 .contact-box {
   background: #f4f4f4;
   width: 76.5rem;
-  height: 30rem;
+  height: 22rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 4rem; }
+  @media (max-width: 75em) {
+    .contact-box {
+      height: 47rem;
+      width: 100%; } }
   .contact-box ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -243,9 +255,11 @@ img {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  height: 30rem;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 75em) {
+    .main-wrapper {
+      flex-direction: column-reverse; } }
 
 .main-nav {
   padding-top: 1.6rem; }
@@ -280,7 +294,7 @@ img {
     height: 2rem; }
     @media (max-width: 37.5em) {
       .main-nav .nav-menu {
-        display: inline-block; } }
+        display: block; } }
     .main-nav .nav-menu__line {
       position: absolute;
       top: 50%;
@@ -575,6 +589,9 @@ input[class^="btn-"]:hover {
   .tooltip-target {
     position: relative; }
 
+.main {
+  min-height: 100vh; }
+
 .move-in-left {
   animation: moveInLeft 0.75s ease-out; }
 
@@ -660,6 +677,9 @@ input[class^="btn-"]:hover {
     transform: rotateY(0deg);
     transition: all 0.4s ease-in 0s;
     cursor: pointer; }
+  @media (max-width: 75em) {
+    .card-flip {
+      grid-column-start: 2; } }
 
 .card-flip:hover .back-item__list li {
   opacity: 1;

@@ -35,7 +35,7 @@
     width: 3rem;
     height: 2rem;
     @include respond(phone) {
-      display: inline-block;
+      display: block;
     }
     &__line {
       position: absolute;

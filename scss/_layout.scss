@@ -12,10 +12,14 @@
 %grid-shared {
   display: grid;
   grid-gap: 1.6rem;
+  justify-content: center;
 }
 .grid-2 {
   @extend %grid-shared;
   grid-template-columns: repeat(2, 1fr);
+  @include respond(tab-land) {
+    grid-template-columns: 2fr 8fr 2fr;
+  }
 }
 .grid-3 {
   @extend %grid-shared;
@@ -31,7 +35,7 @@
   &-home {
     position: relative;
     background: $bg-image no-repeat center right/cover;
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
 
     //padding to allow box shadow on header button
@@ -72,7 +76,7 @@
 .svg-box {
   position: relative;
   padding: 4rem;
-  width: 47rem;
+  flex: 1 1 47rem;
   height: 22rem;
   background: #333;
   color: #fff;
@@ -80,6 +84,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include respond(tab-land) {
+    align-self: stretch;
+  }
   &__heading-wrapper {
     display: flex;
     justify-content: center;
@@ -95,11 +102,15 @@
 .contact-box {
   background: #f4f4f4;
   width: 76.5rem;
-  height: 30rem;
+  height: 22rem;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 4rem;
+  @include respond(tab-land) {
+    height: 47rem;
+    width: 100%;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -129,7 +140,9 @@
   position: relative;
   display: flex;
   flex-direction: row-reverse;
-  height: 30rem;
   align-items: center;
   justify-content: center;
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+  }
 }
