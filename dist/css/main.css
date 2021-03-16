@@ -313,6 +313,11 @@ img {
         flex: 0 0 auto;
         height: 60rem;
         margin: 0 auto 3rem; } }
+    @media (max-width: 37.5em) {
+      .bio__image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 3rem; } }
   .bio__container {
     flex: 1 1 auto;
     border-left: 3px solid #ffbc00;
@@ -322,6 +327,11 @@ img {
       .bio__container {
         flex: 0 1 70%;
         width: 70%;
+        margin: 0 auto 3rem; } }
+    @media (max-width: 37.5em) {
+      .bio__container {
+        width: 100%;
+        height: auto;
         margin: 0 auto 3rem; } }
   .bio__text-wrap {
     margin: 0 auto;

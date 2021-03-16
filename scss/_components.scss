@@ -58,6 +58,11 @@
       height: 60rem;
       margin: 0 auto 3rem;
     }
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
+      margin: 0 auto 3rem;
+    }
   }
   &__container {
     flex: 1 1 auto;
@@ -67,6 +72,11 @@
     @include respond(tab-land) {
       flex: 0 1 70%;
       width: 70%;
+      margin: 0 auto 3rem;
+    }
+    @include respond(phone) {
+      width: 100%;
+      height: auto;
       margin: 0 auto 3rem;
     }
   }
