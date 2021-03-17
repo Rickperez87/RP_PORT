@@ -88,7 +88,8 @@
     grid-column-start: 2;
   }
   @include respond(phone) {
-    @include card-flip(16rem, 100%, 0s);
+    @include card-flip(25rem, 100%, 0s);
+    grid-column-start: 1;
   }
 }
 .card-flip:hover .back-item__list li {

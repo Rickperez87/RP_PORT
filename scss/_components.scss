@@ -154,8 +154,8 @@
     background-size: contain;
     background-position: center top;
     @include respond(phone) {
-      height: 30rem;
-      background-size: cover;
+      height: 25rem;
+      background-size: 100%;
     }
   }
   &-wrapper {
@@ -170,8 +170,8 @@
     background-size: contain;
     background-position: center top;
     @include respond(phone) {
-      height: 30rem;
-      background-size: cover;
+      height: 25rem;
+      background-size: 100%;
     }
   }
   &__list {

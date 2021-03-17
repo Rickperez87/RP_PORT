@@ -20,6 +20,9 @@
   @include respond(tab-land) {
     grid-template-columns: 2fr 8fr 2fr;
   }
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .grid-3 {
   @extend %grid-shared;
