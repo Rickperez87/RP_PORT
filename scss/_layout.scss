@@ -52,6 +52,9 @@
       h1 {
         font-size: 6.4rem;
         line-height: 1.6;
+        @include respond(phone) {
+          font-size: 5.4rem;
+        }
       }
       .btn-light:hover {
         transform: translateY(-3px);
@@ -61,6 +64,14 @@
         transform: translateY(-1px);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       }
+      .btn-light {
+        //bring button lower for mobile ease of thumb tap.
+        @include respond(phone) {
+          position: absolute;
+          bottom: 20%;
+          left: calc(50%-13.2rem);
+        }
+      }
     }
   }
   &-top {
@@ -68,6 +79,10 @@
     color: #fff;
     height: 8.8rem;
     border-bottom: 3px solid $main-color;
+    //adust image section for mobile device
+    @include respond(phone) {
+      background-position: 20% top;
+    }
   }
 }
 //contact page

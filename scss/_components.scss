@@ -61,7 +61,7 @@
     @include respond(phone) {
       width: 90%;
       height: auto;
-      margin: 0 auto 3rem;
+      margin: 0 auto 0.5rem;
     }
   }
   &__container {

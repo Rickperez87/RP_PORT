@@ -188,18 +188,29 @@ img {
     .header-home__content h1 {
       font-size: 6.4rem;
       line-height: 1.6; }
+      @media (max-width: 37.5em) {
+        .header-home__content h1 {
+          font-size: 5.4rem; } }
     .header-home__content .btn-light:hover {
       transform: translateY(-3px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
     .header-home__content .btn-light:active {
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 37.5em) {
+      .header-home__content .btn-light {
+        position: absolute;
+        bottom: 20%;
+        left: calc(50%-13.2rem); } }
 
 .header-top {
   background: url("../images/bg-img-sml-crop.jpg") no-repeat 20% 20%/cover;
   color: #fff;
   height: 8.8rem;
   border-bottom: 3px solid #ffbc00; }
+  @media (max-width: 37.5em) {
+    .header-top {
+      background-position: 20% top; } }
 
 .svg-box {
   position: relative;
@@ -322,7 +333,7 @@ img {
       .bio__image {
         width: 90%;
         height: auto;
-        margin: 0 auto 3rem; } }
+        margin: 0 auto 0.5rem; } }
   .bio__container {
     flex: 1 1 auto;
     border-left: 3px solid #ffbc00;
