@@ -102,6 +102,9 @@
   @include respond(tab-land) {
     align-self: stretch;
   }
+  @include respond(phone) {
+    flex: 1 1 27rem;
+  }
   &__heading-wrapper {
     display: flex;
     justify-content: center;
@@ -112,6 +115,10 @@
     background-size: contain;
     width: 15rem;
     height: 10rem;
+    @include respond(phone) {
+      width: 13rem;
+      height: 8rem;
+    }
   }
 }
 .contact-box {
@@ -126,11 +133,19 @@
     height: 47rem;
     width: 100%;
   }
+  @include respond(phone) {
+    height: 70rem;
+  }
   ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     color: #333;
     height: 100%;
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 4rem;
+      padding: 4rem 0;
+    }
     li {
       display: flex;
       flex-direction: column;

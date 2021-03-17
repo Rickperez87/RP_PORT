@@ -99,7 +99,7 @@ input[class^="btn-"]:hover {
 }
 .mb-mobile {
   @include respond(phone) {
-    margin-bottom: 7.8rem;
+    margin-bottom: 6.4rem;
   }
 }
 

@@ -81,6 +81,9 @@
     top: 4.5rem;
     right: 3rem;
     text-transform: uppercase;
+    @include respond(phone) {
+      font-size: 4.5rem;
+    }
   }
   &__sub-text {
     font-size: 2.4rem;
@@ -91,6 +94,9 @@
     right: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    @include respond(phone) {
+      line-height: 2rem;
+    }
   }
 }
 
