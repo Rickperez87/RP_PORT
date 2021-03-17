@@ -415,6 +415,11 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 37.5em) {
+      .back-item__list {
+        width: 90%;
+        top: 40%;
+        font-size: 0.4rem; } }
     .back-item__list li {
       opacity: 0;
       background: #333; }
@@ -423,6 +428,10 @@ img {
     opacity: 0;
     position: relative;
     top: -14rem; }
+    @media (max-width: 37.5em) {
+      .back-item__more {
+        top: -9rem;
+        font-size: 0.4rem; } }
     .back-item__more:hover {
       cursor: pointer; }
 
@@ -570,6 +579,10 @@ input[class^="btn-"]:hover {
 
 .py-4 {
   padding: 6.4rem 0; }
+
+@media (max-width: 37.5em) {
+  .mb-mobile {
+    margin-bottom: 7.8rem; } }
 
 .tooltip {
   background: #333;

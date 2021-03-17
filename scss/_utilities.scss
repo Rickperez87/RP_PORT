@@ -94,6 +94,11 @@ input[class^="btn-"]:hover {
 %shadow {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+.mb-mobile {
+  @include respond(phone) {
+    margin-bottom: 7.8rem;
+  }
+}
 
 //Tooltip Styles - Contact Page
 .tooltip {
