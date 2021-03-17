@@ -154,7 +154,7 @@
     background-size: contain;
     background-position: center top;
     @include respond(phone) {
-      height: 25rem;
+      height: 30rem;
       background-size: 100%;
     }
   }
@@ -170,7 +170,7 @@
     background-size: contain;
     background-position: center top;
     @include respond(phone) {
-      height: 25rem;
+      height: 30rem;
       background-size: 100%;
     }
   }
