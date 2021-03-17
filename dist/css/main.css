@@ -67,16 +67,6 @@ img {
   font-size: 2.1rem;
   margin-bottom: 1.6rem; }
 
-.strong {
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
-  margin: 1rem 0; }
-
-.sub {
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  font-weight: 800; }
-
 .bio .project-title {
   margin-bottom: 2rem;
   font-size: 2.4rem;
@@ -125,6 +115,15 @@ img {
     .svg-box__sub-text {
       line-height: 2rem; } }
 
+.strong {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem; }
+
+.sub {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 800; }
+
 .project__text span {
   display: block; }
   .project__text span:not(:last-child) {
@@ -149,6 +148,9 @@ img {
   background-size: contain;
   width: 100%;
   height: 7rem; }
+  @media (max-width: 56.25em) {
+    .contact-box__svg--email, .contact-box__svg--phone, .contact-box__svg--location {
+      height: 8.5rem; } }
 
 .project__text, .project li {
   font-weight: lighter;
@@ -513,23 +515,18 @@ img {
     opacity: 1; }
 
 .copy-email {
-  position: relative;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
-  height: 3.7rem;
-  width: 40%;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   border-bottom: 3px solid transparent;
   transition: all 0.3s; }
   .copy-email:hover {
     cursor: pointer;
     background: #ffbc00; }
   .copy-email .far {
-    font-size: 1.8rem; }
-  .copy-email + span {
-    margin-top: -3px; }
+    font-size: 1.8rem;
+    margin-right: 0.5rem; }
 
 .button-box {
   margin: 0 auto 2.4rem;

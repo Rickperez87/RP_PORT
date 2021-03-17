@@ -31,16 +31,6 @@
   font-size: 2.1rem;
   margin-bottom: 1.6rem;
 }
-.strong {
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
-  margin: 1rem 0;
-}
-.sub {
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  font-weight: 800;
-}
 
 //about page
 .bio {
@@ -99,6 +89,16 @@
     }
   }
 }
+//styles contact box text
+.strong {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+.sub {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+}
 
 //project pages
 
@@ -137,6 +137,9 @@
   background-size: contain;
   width: 100%;
   height: 7rem;
+  @include respond(tab-port) {
+    height: 8.5rem;
+  }
 }
 
 %paragraph-text-shared {

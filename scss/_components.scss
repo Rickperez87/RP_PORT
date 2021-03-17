@@ -1,3 +1,4 @@
+///////////////////////////////////////
 // Main Nav
 .main-nav,
 .mobile-nav {
@@ -40,6 +41,7 @@
     padding: 2rem 4rem;
   }
 }
+///////////////////////////////////////
 //About page
 .bio {
   display: flex;
@@ -104,7 +106,7 @@
     color: $main-color;
   }
 }
-
+///////////////////////////////////////
 // work page
 
 // bar for work cards
@@ -142,8 +144,8 @@
     top: 0;
   }
 }
+///////////////////////////////////////
 //work cards
-
 .item {
   position: relative;
   overflow: hidden;
@@ -251,7 +253,7 @@
     ),
     url("../images/full-stack-back-1x.png");
 }
-
+///////////////////////////////////////
 //contact Page
 .svg-box {
   &__underline {
@@ -271,14 +273,10 @@
   }
 }
 .copy-email {
-  position: relative;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-between;
-  height: 3.7rem;
-  width: 40%;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   border-bottom: 3px solid transparent;
   transition: all 0.3s;
   &:hover {
@@ -287,13 +285,14 @@
   }
   .far {
     font-size: 1.8rem;
+    margin-right: 0.5rem;
   }
 
   & + span {
-    margin-top: -3px;
+    // margin-top: -3px;
   }
 }
-
+///////////////////////////////////////
 // survey app page
 .button-box {
   margin: 0 auto 2.4rem;
