@@ -149,19 +149,23 @@
 .item {
   position: relative;
   overflow: hidden;
+  height: $card-height;
+  @include respond(tab-land) {
+    height: 54.8rem;
+  }
+  @include respond(phone) {
+    height: 31rem;
+  }
   &-image {
-    height: $card-height;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center top;
-    @include respond(phone) {
-      height: 30rem;
-      background-size: 100%;
-    }
   }
   &-wrapper {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    height: $card-height;
   }
 }
 .back-item {

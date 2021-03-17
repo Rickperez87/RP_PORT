@@ -83,7 +83,7 @@
   width: 11rem;
 }
 .card-flip {
-  @include card-flip(49.8rem, 100%, 0s);
+  @include card-flip(45.8rem, 100%, 0s);
   @include respond(tab-land) {
     grid-column-start: 2;
   }
