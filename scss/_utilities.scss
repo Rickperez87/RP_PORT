@@ -89,6 +89,9 @@ input[class^="btn-"]:hover {
   }
   &-3 {
     padding: 4.8rem 0;
+    @include respond(phone) {
+      padding: 3rem 0;
+    }
   }
   &-4 {
     padding: 6.4rem 0;
@@ -100,6 +103,11 @@ input[class^="btn-"]:hover {
 .mb-mobile {
   @include respond(phone) {
     margin-bottom: 6.4rem;
+  }
+}
+.mb-mobile--lg {
+  @include respond(phone) {
+    margin-bottom: 9.4rem;
   }
 }
 
