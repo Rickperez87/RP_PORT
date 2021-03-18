@@ -101,7 +101,7 @@ img {
   @media (max-width: 37.5em) {
     .svg-box__lrg-text {
       font-size: 3.5rem;
-      width: 24rem;
+      width: 20rem;
       height: 7rem; } }
 
 .svg-box__sub-text {
@@ -557,6 +557,50 @@ img {
 .btn-main:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.page-control, .prev, .next {
+  position: fixed;
+  top: 25%;
+  width: 240px;
+  height: 50%; }
+
+.page-control {
+  position: fixed;
+  width: 1px;
+  height: 1px; }
+  .page-control span {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.prev {
+  left: 0; }
+
+.next {
+  right: 0; }
+
+em {
+  display: block;
+  position: absolute;
+  width: 3.6rem;
+  height: 3.6rem;
+  top: calc(50% - 1.8rem);
+  left: calc(50% - 1.8rem); }
+  em::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: 0;
+    right: auto;
+    transform: rotate(45deg);
+    height: 100%;
+    width: 2px;
+    background-color: #333;
+    transform-origin: 50% 100% 0;
+    transition: transform 0.16s ease-out; }
 
 .bg-primary {
   background: #ffbc00;

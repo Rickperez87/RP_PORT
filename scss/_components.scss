@@ -318,3 +318,54 @@
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
+
+%page-control-shared {
+  position: fixed;
+  top: 25%;
+  width: 240px;
+  height: 50%;
+}
+.page-control {
+  @extend %page-control-shared;
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  span {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.prev {
+  @extend %page-control-shared;
+  left: 0;
+}
+.next {
+  @extend %page-control-shared;
+  right: 0;
+}
+em {
+  display: block;
+  position: absolute;
+  width: 3.6rem;
+  height: 3.6rem;
+  top: calc(50% - 1.8rem);
+  left: calc(50% - 1.8rem);
+  &::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: 0;
+    right: auto;
+    transform: rotate(45deg);
+    height: 100%;
+    width: 2px;
+    background-color: $dark-color;
+    transform-origin: 50% 100% 0;
+    transition: transform 0.16s ease-out;
+  }
+}

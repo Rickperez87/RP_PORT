@@ -73,7 +73,7 @@
     text-transform: uppercase;
     @include respond(phone) {
       font-size: 3.5rem;
-      width: 24rem;
+      width: 20rem;
       height: 7rem;
     }
   }
