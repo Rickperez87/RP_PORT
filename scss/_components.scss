@@ -318,54 +318,122 @@
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-%page-control-shared {
+/////////////////////////
+//page controls
+%next-prev-shared {
   position: fixed;
   top: 25%;
-  width: 240px;
+  width: 24rem;
   height: 50%;
-}
-.page-control {
-  @extend %page-control-shared;
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  span {
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  transition: transform 0.7s cubic-bezier(0.7, 0, 0.25, 1) 0.25s,
+    opacity 0.2s ease-out 0.75s;
 }
 
-.prev {
-  @extend %page-control-shared;
-  left: 0;
-}
-.next {
-  @extend %page-control-shared;
-  right: 0;
-}
-em {
-  display: block;
+%before-after-shared {
+  content: "";
   position: absolute;
-  width: 3.6rem;
-  height: 3.6rem;
-  top: calc(50% - 1.8rem);
-  left: calc(50% - 1.8rem);
-  &::before {
-    display: inline-block;
-    position: absolute;
-    content: "";
-    top: -50%;
+  display: inline-block;
+  height: 100%;
+  width: 2px;
+  background-color: $dark-color;
+  transform-origin: 50% 100% 0;
+  transition: transform 0.16s ease-out;
+}
+%page-control-span-shared {
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+  top: calc(50% - 1.6rem);
+  height: 3rem;
+  padding: 0 1rem;
+  text-transform: lowercase;
+  line-height: 1.7;
+  opacity: 0;
+  transition: opacity 0.1s ease 0.125s,
+    transform 0.3s cubic-bezier(0, 0, 0, 1) 0.125s;
+}
+
+.page-control {
+  .prev {
+    @extend %next-prev-shared;
     left: 0;
-    right: auto;
-    transform: rotate(45deg);
-    height: 100%;
-    width: 2px;
-    background-color: $dark-color;
-    transform-origin: 50% 100% 0;
-    transition: transform 0.16s ease-out;
+    span {
+      @extend %page-control-span-shared;
+      left: calc(50% + 0.5rem);
+      transform: translate3d(-3rem, 0, 0);
+    }
+    em {
+      display: block;
+      position: absolute;
+      width: 3.6rem;
+      height: 3.6rem;
+      top: calc(50% - 1.8rem);
+      left: calc(50% - 1.8rem);
+      &::before {
+        @extend %before-after-shared;
+        top: -50%;
+        left: 0;
+        transform: rotate(45deg);
+      }
+      &:after {
+        @extend %before-after-shared;
+        top: calc(-50% + -1px);
+        left: 0;
+        transform: rotate(135deg);
+      }
+    }
+    &:hover {
+      em:before {
+        transform: rotate(30deg);
+      }
+      em:after {
+        transform: rotate(150deg);
+      }
+      span {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+  .next {
+    @extend %next-prev-shared;
+    right: 0;
+    span {
+      @extend %page-control-span-shared;
+      right: calc(50% + 0.5rem);
+      transform: translate3d(3rem, 0, 0);
+    }
+    em {
+      display: block;
+      position: absolute;
+      width: 3.6rem;
+      height: 3.6rem;
+      top: calc(50% - 1.8rem);
+      right: calc(50% - 1.8rem);
+      &::before {
+        @extend %before-after-shared;
+        top: -50%;
+        right: 0;
+        transform: rotate(-45deg);
+      }
+      &:after {
+        @extend %before-after-shared;
+        top: calc(-50% + -1px);
+        right: 0;
+        transform: rotate(-135deg);
+      }
+    }
+    &:hover {
+      em:before {
+        transform: rotate(-30deg);
+      }
+      em:after {
+        transform: rotate(-150deg);
+      }
+      span {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 }
