@@ -265,6 +265,9 @@
     height: 0.4rem;
     width: 95%;
     border-radius: 150rem;
+    @include respond(phone) {
+      height: 0.3rem;
+    }
   }
 
   &__btn {

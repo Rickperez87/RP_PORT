@@ -100,7 +100,9 @@ img {
   text-transform: uppercase; }
   @media (max-width: 37.5em) {
     .svg-box__lrg-text {
-      font-size: 4.5rem; } }
+      font-size: 3.5rem;
+      width: 24rem;
+      height: 7rem; } }
 
 .svg-box__sub-text {
   font-size: 2.4rem;
@@ -113,7 +115,8 @@ img {
   letter-spacing: 0.2rem; }
   @media (max-width: 37.5em) {
     .svg-box__sub-text {
-      line-height: 2rem; } }
+      font-size: 1.6rem;
+      line-height: 1.4rem; } }
 
 .strong {
   font-size: 2.5rem;
@@ -143,6 +146,9 @@ img {
   color: #ffbc00;
   margin: 1rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); }
+  @media (max-width: 37.5em) {
+    .course-list__items li, .back-item__list li, .back-item__more {
+      margin: 0.4rem; } }
 
 .contact-box__svg--email, .contact-box__svg--phone, .contact-box__svg--location {
   background-size: contain;
@@ -256,8 +262,8 @@ img {
     height: 10rem; }
     @media (max-width: 37.5em) {
       .svg-box__svg {
-        width: 13rem;
-        height: 8rem; } }
+        width: 9rem;
+        height: 5rem; } }
 
 .contact-box {
   background: #f4f4f4;
@@ -510,6 +516,9 @@ img {
   height: 0.4rem;
   width: 95%;
   border-radius: 150rem; }
+  @media (max-width: 37.5em) {
+    .svg-box__underline {
+      height: 0.3rem; } }
 
 .svg-box__btn {
   border-left: 1px solid #000;
