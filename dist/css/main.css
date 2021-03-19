@@ -317,7 +317,7 @@ img {
   padding-top: 1.6rem; }
   .main-nav li,
   .mobile-nav li {
-    padding: 1.6rem 2.4rem; }
+    padding: 1.6rem 1.2rem; }
   .main-nav a,
   .mobile-nav a {
     text-decoration: none;
@@ -337,6 +337,16 @@ img {
   .main-nav li {
     display: none; } }
 
+.mobile-nav__prev:before, .mobile-nav__prev:after, .mobile-nav__next:before, .mobile-nav__next:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 70%;
+  width: 2px;
+  top: -5%;
+  background-color: #fff;
+  transform-origin: 50% 100% 0; }
+
 .mobile-nav {
   display: none; }
   @media (max-width: 37.5em) {
@@ -348,6 +358,31 @@ img {
       background: #333;
       width: 100%;
       padding: 2rem 4rem; } }
+  .mobile-nav__prev {
+    position: relative;
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem; }
+    .mobile-nav__prev:before {
+      transform: rotate(45deg);
+      left: 0; }
+    .mobile-nav__prev:after {
+      transform: rotate(135deg);
+      left: 0; }
+  .mobile-nav__next {
+    position: relative;
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem; }
+    .mobile-nav__next:before {
+      transform: rotate(-45deg);
+      right: 0; }
+    .mobile-nav__next:after {
+      transform: rotate(-135deg);
+      right: 0; }
 
 .bio {
   display: flex;
@@ -564,13 +599,13 @@ img {
   height: 50%;
   width: 24rem;
   transition: transform 0.7s cubic-bezier(0.7, 0, 0.25, 1) 0.25s, opacity 0.2s ease-out 0.75s; }
-  @media (max-width: 56.25em) {
+  @media (max-width: 75em) {
     .page-control .prev, .page-control .next {
       top: 25%;
       height: 25%;
-      width: 14rem; } }
+      width: 5rem; } }
 
-.page-control .prev em::before, .page-control .prev em:after, .page-control .next em::before, .page-control .next em:after {
+.page-control .prev em::before, .page-control .prev em:after, .page-control .next em:before, .page-control .next em:after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -584,12 +619,13 @@ img {
   position: absolute;
   display: inline-block;
   white-space: nowrap;
-  top: calc(50% - 1.6rem);
+  top: calc(50% - 3rem);
   height: 3rem;
   padding: 0 1rem;
   text-transform: lowercase;
   line-height: 1.7;
   opacity: 0;
+  font-size: 2rem;
   transition: opacity 0.1s ease 0.125s, transform 0.3s cubic-bezier(0, 0, 0, 1) 0.125s; }
 
 @media (max-width: 37.5em) {
@@ -636,7 +672,7 @@ img {
     height: 3.6rem;
     top: calc(50% - 1.8rem);
     right: calc(50% - 1.8rem); }
-    .page-control .next em::before {
+    .page-control .next em:before {
       top: -50%;
       right: 0;
       transform: rotate(-45deg); }
