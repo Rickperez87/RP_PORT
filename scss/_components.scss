@@ -200,18 +200,18 @@
   @include respond(tab-land) {
     height: 54.8rem;
   }
-  @include respond(phone) {
-    height: 31rem;
-  }
   &-image {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center top;
+    @include respond(phone) {
+      height: 30rem;
+      background-size: 100%;
+    }
   }
   &-wrapper {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     height: $card-height;
   }
 }
@@ -379,11 +379,6 @@
     height: 25%;
     width: 5rem;
   }
-  // @include respond(tab-port) {
-  //   top: 25%;
-  //   height: 25%;
-  //   width: 14rem;
-  // }
 }
 
 %before-after-shared {
@@ -400,7 +395,7 @@
   position: absolute;
   display: inline-block;
   white-space: nowrap;
-  top: calc(50% - 3rem);
+  top: calc(50% - 2rem);
   height: 3rem;
   padding: 0 1rem;
   text-transform: lowercase;

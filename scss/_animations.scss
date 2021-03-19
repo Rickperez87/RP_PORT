@@ -62,7 +62,6 @@
     backface-visibility: hidden;
     transition: all 0.1s ease-in 0s;
     overflow: hidden;
-
     &--back {
       transform: rotateY(180deg);
     }
