@@ -165,7 +165,7 @@ img {
 
 .container {
   max-width: 128rem;
-  padding: 0 24px;
+  padding: 0 2.4rem;
   margin: auto;
   overflow: hidden; }
 
@@ -337,6 +337,12 @@ img {
   .main-nav li {
     display: none; } }
 
+.mobile-nav__prev, .mobile-nav__next {
+  position: relative;
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem; }
+
 .mobile-nav__prev:before, .mobile-nav__prev:after, .mobile-nav__next:before, .mobile-nav__next:after {
   content: "";
   position: absolute;
@@ -357,32 +363,19 @@ img {
       left: 0;
       background: #333;
       width: 100%;
-      padding: 2rem 4rem; } }
-  .mobile-nav__prev {
-    position: relative;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem; }
-    .mobile-nav__prev:before {
-      transform: rotate(45deg);
-      left: 0; }
-    .mobile-nav__prev:after {
-      transform: rotate(135deg);
-      left: 0; }
-  .mobile-nav__next {
-    position: relative;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem; }
-    .mobile-nav__next:before {
-      transform: rotate(-45deg);
-      right: 0; }
-    .mobile-nav__next:after {
-      transform: rotate(-135deg);
-      right: 0; }
+      padding: 2rem 0.5rem; } }
+  .mobile-nav__prev:before {
+    transform: rotate(45deg);
+    left: 0; }
+  .mobile-nav__prev:after {
+    transform: rotate(135deg);
+    left: 0; }
+  .mobile-nav__next:before {
+    transform: rotate(-45deg);
+    right: 0; }
+  .mobile-nav__next:after {
+    transform: rotate(-135deg);
+    right: 0; }
 
 .bio {
   display: flex;
@@ -709,7 +702,7 @@ img {
 
 .btn-main, .btn-light, .btn-dark {
   display: inline-block;
-  padding: 13px 32px;
+  padding: 1.3rem 3.2rem;
   transition: all 0.5s;
   border: none;
   cursor: pointer; }
@@ -820,7 +813,7 @@ input[class^="btn-"]:hover {
 
 @keyframes moveInLeft {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
     opacity: 0; }
   80% {
     transform: translateX(5px); }
@@ -835,7 +828,7 @@ input[class^="btn-"]:hover {
 
 @keyframes moveInBottom {
   0% {
-    transform: translateY(30px);
+    transform: translateY(3rem);
     opacity: 0; }
   80% {
     transform: translateY(0); }
@@ -932,7 +925,7 @@ input[class^="btn-"]:hover {
 .back-item__list li, .back-item__more {
   backface-visibility: hidden;
   animation-fill-mode: backwards;
-  transform-origin: 50% 50% -10px;
+  transform-origin: 50% 50% -1rem;
   transform: rotateX(92deg);
   transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5); }
 

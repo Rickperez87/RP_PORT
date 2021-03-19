@@ -15,7 +15,7 @@
 
 @keyframes moveInLeft {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
     opacity: 0;
   }
   80% {
@@ -36,7 +36,7 @@
 }
 @keyframes moveInBottom {
   0% {
-    transform: translateY(30px);
+    transform: translateY(3rem);
     opacity: 0;
   }
   80% {
@@ -105,7 +105,7 @@
 %swing-down {
   backface-visibility: hidden;
   animation-fill-mode: backwards;
-  transform-origin: 50% 50% -10px;
+  transform-origin: 50% 50% -1rem;
   transform: rotateX(92deg);
   transition: transform 0.28s cubic-bezier(0.5, 1.5, 0.5, 1.5);
 }

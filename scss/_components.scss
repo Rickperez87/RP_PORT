@@ -29,7 +29,12 @@
     }
   }
 }
-
+%mobile-prev-next-shared {
+  position: relative;
+  display: block;
+  width: 3.6rem;
+  height: 3.6rem;
+}
 %mobile-before-after-shared {
   content: "";
   position: absolute;
@@ -50,13 +55,10 @@
     left: 0;
     background: $dark-color;
     width: 100%;
-    padding: 2rem 4rem;
+    padding: 2rem 0.5rem;
   }
   &__prev {
-    position: relative;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem;
+    @extend %mobile-prev-next-shared;
     &:before {
       @extend %mobile-before-after-shared;
       transform: rotate(45deg);
@@ -69,13 +71,7 @@
     }
   }
   &__next {
-    position: relative;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem;
-    display: block;
-    width: 3.6rem;
-    height: 3.6rem;
+    @extend %mobile-prev-next-shared;
     &:before {
       @extend %mobile-before-after-shared;
       transform: rotate(-45deg);

@@ -1,11 +1,16 @@
 // mixins
 //media queries
-// 0-600px: Phone
+// 0-352x: Phone xs
+// 353-600px: Phone
 // 600-900px: Tablet Portrait
 // 900 - 1200px: Tablet Landscape
-
 // 1800px+: big-desktop
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-xs {
+    @media (max-width: 22em) {
+      @content;
+    } //352px
+  }
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       @content;
