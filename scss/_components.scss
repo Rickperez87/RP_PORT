@@ -323,10 +323,15 @@
 %next-prev-shared {
   position: fixed;
   top: 25%;
-  width: 24rem;
   height: 50%;
+  width: 24rem;
   transition: transform 0.7s cubic-bezier(0.7, 0, 0.25, 1) 0.25s,
     opacity 0.2s ease-out 0.75s;
+  @include respond(tab-port) {
+    top: 25%;
+    height: 25%;
+    width: 14rem;
+  }
 }
 
 %before-after-shared {
@@ -354,6 +359,9 @@
 }
 
 .page-control {
+  @include respond(phone) {
+    display: none;
+  }
   .prev {
     @extend %next-prev-shared;
     left: 0;

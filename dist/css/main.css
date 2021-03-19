@@ -561,9 +561,14 @@ img {
 .page-control .prev, .page-control .next {
   position: fixed;
   top: 25%;
-  width: 24rem;
   height: 50%;
+  width: 24rem;
   transition: transform 0.7s cubic-bezier(0.7, 0, 0.25, 1) 0.25s, opacity 0.2s ease-out 0.75s; }
+  @media (max-width: 56.25em) {
+    .page-control .prev, .page-control .next {
+      top: 25%;
+      height: 25%;
+      width: 14rem; } }
 
 .page-control .prev em::before, .page-control .prev em:after, .page-control .next em::before, .page-control .next em:after {
   content: "";
@@ -586,6 +591,10 @@ img {
   line-height: 1.7;
   opacity: 0;
   transition: opacity 0.1s ease 0.125s, transform 0.3s cubic-bezier(0, 0, 0, 1) 0.125s; }
+
+@media (max-width: 37.5em) {
+  .page-control {
+    display: none; } }
 
 .page-control .prev {
   left: 0; }
