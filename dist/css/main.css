@@ -525,7 +525,7 @@ img {
   background-image: url("../images/apologeticsqna-front-1x.jpg"); }
 
 .image-front-4 {
-  background-image: url("../images/full-stack-front-1x.png"); }
+  background-image: url("../images/purgo-front-1x.png"); }
 
 .image-back-1 {
   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/survey-back-1x.jpg"); }
@@ -537,7 +537,7 @@ img {
   background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/apologeticsqna-back-1x.jpg"); }
 
 .image-back-4 {
-  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/full-stack-back-1x.png"); }
+  background-image: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.8)), url("../images/purgo-back-1x.png"); }
 
 .svg-box__underline {
   background: #ffbc00;
