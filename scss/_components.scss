@@ -341,10 +341,6 @@
     font-size: 1.8rem;
     margin-right: 0.5rem;
   }
-
-  & + span {
-    // margin-top: -3px;
-  }
 }
 ///////////////////////////////////////
 // survey app page
@@ -352,6 +348,16 @@
   margin: 0 auto 2.4rem;
   text-align: left;
   width: 100%;
+  span {
+    margin-right: 0.5rem;
+  }
+  .github {
+    background: #eee;
+    color: $dark-color;
+  }
+  .btn-main {
+    text-transform: lowercase;
+  }
 }
 .main-image {
   width: 100%;
