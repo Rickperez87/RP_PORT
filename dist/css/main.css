@@ -652,13 +652,14 @@ img {
       top: calc(-50% + -1px);
       left: 0;
       transform: rotate(135deg); }
-  .page-control .prev:hover em:before {
-    transform: rotate(30deg); }
-  .page-control .prev:hover em:after {
-    transform: rotate(150deg); }
-  .page-control .prev:hover span {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); }
+  @media (hover: hover) {
+    .page-control .prev:hover em:before {
+      transform: rotate(30deg); }
+    .page-control .prev:hover em:after {
+      transform: rotate(150deg); }
+    .page-control .prev:hover span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); } }
 
 .page-control .next {
   right: 0; }
@@ -680,13 +681,14 @@ img {
       top: calc(-50% + -1px);
       right: 0;
       transform: rotate(-135deg); }
-  .page-control .next:hover em:before {
-    transform: rotate(-30deg); }
-  .page-control .next:hover em:after {
-    transform: rotate(-150deg); }
-  .page-control .next:hover span {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); }
+  @media (hover: hover) {
+    .page-control .next:hover em:before {
+      transform: rotate(-30deg); }
+    .page-control .next:hover em:after {
+      transform: rotate(-150deg); }
+    .page-control .next:hover span {
+      opacity: 1;
+      transform: translate3d(0, 0, 0); } }
 
 .bg-primary {
   background: #ffbc00;
@@ -840,6 +842,7 @@ input[class^="btn-"]:hover {
   position: relative;
   perspective: 150rem;
   height: 11rem;
+  outline: none;
   width: 11rem; }
   .coin-flip__face {
     position: absolute;
@@ -852,10 +855,20 @@ input[class^="btn-"]:hover {
     overflow: hidden; }
     .coin-flip__face--back {
       transform: rotateY(180deg); }
-  .coin-flip:hover .coin-flip__face--front {
+  @media (hover: hover) {
+    .coin-flip:hover .coin-flip__face--front {
+      transform: rotateY(-180deg);
+      transition: all 0.4s ease-in 0s; }
+    .coin-flip:hover .coin-flip__face--back {
+      transform: rotateY(0deg);
+      transition: all 0.4s ease-in 0s;
+      cursor: pointer; } }
+  .coin-flip:active,
+  .coin-flip:focus .coin-flip__face--front {
     transform: rotateY(-180deg);
     transition: all 0.4s ease-in 0s; }
-  .coin-flip:hover .coin-flip__face--back {
+  .coin-flip:active,
+  .coin-flip:focus .coin-flip__face--back {
     transform: rotateY(0deg);
     transition: all 0.4s ease-in 0s;
     cursor: pointer; }
@@ -864,7 +877,8 @@ input[class^="btn-"]:hover {
   display: inline-block;
   position: relative;
   perspective: 150rem;
-  height: 45.8rem; }
+  height: 45.8rem;
+  outline: none; }
   .card-flip__face {
     position: absolute;
     top: 0;
@@ -876,10 +890,20 @@ input[class^="btn-"]:hover {
     overflow: hidden; }
     .card-flip__face--back {
       transform: rotateY(180deg); }
-  .card-flip:hover .card-flip__face--front {
+  @media (hover: hover) {
+    .card-flip:hover .card-flip__face--front {
+      transform: rotateY(-180deg);
+      transition: all 0.4s ease-in 0s; }
+    .card-flip:hover .card-flip__face--back {
+      transform: rotateY(0deg);
+      transition: all 0.4s ease-in 0s;
+      cursor: pointer; } }
+  .card-flip:active,
+  .card-flip:focus .card-flip__face--front {
     transform: rotateY(-180deg);
     transition: all 0.4s ease-in 0s; }
-  .card-flip:hover .card-flip__face--back {
+  .card-flip:active,
+  .card-flip:focus .card-flip__face--back {
     transform: rotateY(0deg);
     transition: all 0.4s ease-in 0s;
     cursor: pointer; }
@@ -892,6 +916,7 @@ input[class^="btn-"]:hover {
       position: relative;
       perspective: 150rem;
       height: 30rem;
+      outline: none;
       grid-column-start: 1; }
       .card-flip__face {
         position: absolute;
@@ -903,21 +928,44 @@ input[class^="btn-"]:hover {
         transition: all 0.1s ease-in 0s;
         overflow: hidden; }
         .card-flip__face--back {
-          transform: rotateY(180deg); }
-      .card-flip:hover .card-flip__face--front {
+          transform: rotateY(180deg); } }
+  @media (max-width: 37.5em) and (hover: hover) {
+    .card-flip:hover .card-flip__face--front {
+      transform: rotateY(-180deg);
+      transition: all 0.4s ease-in 0s; }
+    .card-flip:hover .card-flip__face--back {
+      transform: rotateY(0deg);
+      transition: all 0.4s ease-in 0s;
+      cursor: pointer; } }
+  @media (max-width: 37.5em) {
+      .card-flip:active,
+      .card-flip:focus .card-flip__face--front {
         transform: rotateY(-180deg);
         transition: all 0.4s ease-in 0s; }
-      .card-flip:hover .card-flip__face--back {
+      .card-flip:active,
+      .card-flip:focus .card-flip__face--back {
         transform: rotateY(0deg);
         transition: all 0.4s ease-in 0s;
         cursor: pointer; } }
 
-.card-flip:hover .back-item__list li {
+@media (hover: hover) {
+  .card-flip:hover .back-item__list li {
+    opacity: 1;
+    transform-origin: 0% 0% 0px;
+    transform: rotateX(0deg); }
+  .card-flip:hover .back-item__more {
+    opacity: 1;
+    transform-origin: 0% 0% 0px;
+    transform: rotateX(0deg); } }
+
+.card-flip:active,
+.card-flip:focus .back-item__list li {
   opacity: 1;
   transform-origin: 0% 0% 0px;
   transform: rotateX(0deg); }
 
-.card-flip:hover .back-item__more {
+.card-flip:active,
+.card-flip:focus .back-item__more {
   opacity: 1;
   transform-origin: 0% 0% 0px;
   transform: rotateX(0deg); }

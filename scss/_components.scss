@@ -440,16 +440,18 @@
         transform: rotate(135deg);
       }
     }
-    &:hover {
-      em:before {
-        transform: rotate(30deg);
-      }
-      em:after {
-        transform: rotate(150deg);
-      }
-      span {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+    @media (hover: hover) {
+      &:hover {
+        em:before {
+          transform: rotate(30deg);
+        }
+        em:after {
+          transform: rotate(150deg);
+        }
+        span {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
   }
@@ -481,16 +483,18 @@
         transform: rotate(-135deg);
       }
     }
-    &:hover {
-      em:before {
-        transform: rotate(-30deg);
-      }
-      em:after {
-        transform: rotate(-150deg);
-      }
-      span {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+    @media (hover: hover) {
+      &:hover {
+        em:before {
+          transform: rotate(-30deg);
+        }
+        em:after {
+          transform: rotate(-150deg);
+        }
+        span {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
   }

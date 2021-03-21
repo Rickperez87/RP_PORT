@@ -31,4 +31,9 @@
       @content;
     } //1800px
   }
+  @if breakpoint ==tab-land-min {
+    @media (min-width: 75.1em) {
+      @content;
+    } //1200px
+  }
 }
