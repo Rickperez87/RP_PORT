@@ -458,6 +458,10 @@ img {
   background-color: #28ca41;
   top: 0; }
 
+.bar__title {
+  text-transform: uppercase;
+  text-align: center; }
+
 .item {
   position: relative;
   overflow: hidden;
