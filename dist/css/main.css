@@ -597,6 +597,13 @@ img {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.section {
+  transition: transform 1s, opacity 1s; }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem); }
+
 .page-control .prev, .page-control .next {
   position: fixed;
   top: 25%;

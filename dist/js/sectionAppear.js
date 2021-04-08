@@ -2,6 +2,7 @@ const allSections = document.querySelectorAll("section");
 
 const revealSections = (entries) => {
   const [entry] = entries;
+  console.log(entry);
   if (!entry.isIntersecting) {
     return;
   }
@@ -17,9 +18,9 @@ const obsOptions = {
 const sectionObserver = new IntersectionObserver(revealSections, obsOptions);
 
 allSections.forEach((section) => {
+  sectionObserver.observe(section);
   if (!section.id) {
     return;
   }
-  sectionObserver.observe(section);
   section.classList.add("section--hidden");
 });
